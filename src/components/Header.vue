@@ -5,7 +5,7 @@
       <nav class="navbar navbar-expand-lg navbar-sticky navbar-airy navbar-dark bg-fixed-white navbar-fixed-light" style="background:#000502" >
         <div class="container-fluid">  
           <!-- Navbar Header  -->
-          <router-link class="navbar-brand"  style="heigth:fit-content!important;" to="/">
+          <router-link class="navbar-brand"  style="height:fit-content!important;" to="/">
             <img src="@/assets/longWhite.png" class="logoImg" alt="">
             <!-- <img src="@/assets/new-deco.png" class="logoImg" style="width:41px!important;" alt=""> -->
           </router-link>

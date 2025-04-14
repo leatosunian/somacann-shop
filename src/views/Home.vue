@@ -41,8 +41,7 @@
       </div>
     </section> -->
 
-    <section class="sectionFix">
-      <!-- Hero Slider-->
+    <!-- <section class="sectionFix">
       <div
         class="owl-carousel owl-theme owl-dots-modern home-slider owl-loaded owl-drag"
       >
@@ -55,7 +54,7 @@
               width: 10892px;
             "
           >
-            <div class="owl-item active" style="width: 100%">
+            <div class="owl-item active" style="width: 1556px">
               <div
                 class="item d-flex align-items-center bg-dark dark-overlay"
                 style="height: 800px"
@@ -88,7 +87,7 @@
                 </div>
               </div>
             </div>
-            <div class="owl-item " style="width: 1556px">
+            <div class="owl-item cloned" style="width: 1556px">
               <div
                 class="item d-flex align-items-center"
                 style="height: 800px"
@@ -203,11 +202,75 @@
         <div class="owl-dots disabled"></div>
         <div class="owl-thumbs"></div>
       </div>
-    </section>
+    </section> -->
+
+    <template class="sectionFix">
+      <div>
+        <b-carousel
+          id="carousel-1"
+          v-model="slide"
+          :interval="4000"
+          controls
+          indicators
+          fade="true"
+          background="#00000"
+          img-width="1024"
+          img-height="780"
+          no-hover-pause
+          style="text-shadow: 1px 1px 2px #333"
+          @sliding-start="onSlideStart"
+          @sliding-end="onSlideEnd"
+        >
+          <!-- Text slides with image -->
+          <b-carousel-slide img-src="../assets/banner1test.webp">
+            <div class="container w-full h-full py-6">
+              <div class="row">
+                <div
+                  class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
+                >
+                  <h1 class="mb-4 text-2xl display-2 text-uppercase fw-bold">
+                    Davinci 
+                  </h1>
+                  <p class="mb-5 text-base lead">
+                    Davinci con su arte en el mundo
+                    de la vaporización ha hecho que
+                    sus vaporizadores sean de alta
+                    resistencia y efectividad.
+                  </p>
+                  <p>
+                    <router-link class="btnSlider" to="/products?category=Vaporizadores&subcategory=Davinci"
+                      >Comprar Davinci</router-link>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </b-carousel-slide>
+
+          <!-- Slides with img slot -->
+          <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+          <b-carousel-slide>
+            <template #img>
+              <img
+                class="d-block img-fluid w-100"
+                width="1024"
+                height="480"
+                src="../assets/banner1test.webp"
+                alt="image slot"
+              />
+            </template>
+          </b-carousel-slide>
+
+        </b-carousel>
+
+      </div>
+    </template>
+    
 
     <div class="sectionTitle">
       <span>Últimos ingresos</span>
-      <p class="text-gray-500 ">Descubrí las novedades que acaban de llegar a la tienda.</p>
+      <p class="text-gray-500">
+        Descubrí las novedades que acaban de llegar a la tienda.
+      </p>
     </div>
 
     <section class="pb-2" style="margin: 70px 0">
@@ -265,17 +328,23 @@
 
     <section class="py-4 bg-white" style="margin: 70px 0">
       <div class="container">
-        <!-- <div class="row">
+        <div class="row">
           <div class="mx-auto mb-5 text-center col-xl-8">
             <h2>LO MAS VENDIDO</h2>
-            <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="lead text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
-        </div> -->
+        </div>
 
-        <!-- <div class="row">
+        <div class="row">
           <div class="mb-4 col-md-6 d-flex align-items-md-stretch mb-md-0">
-            <div class="py-6 text-center text-white d-flex align-items-center dark-overlay w-100 py-md-0 model1img" style="">
-             <a class="tile-link" href="category.html"> </a>
+            <div
+              class="py-6 text-center text-white d-flex align-items-center dark-overlay w-100 py-md-0 model1img"
+              style=""
+            >
+              <a class="tile-link" href="category.html"> </a>
               <div class="card-img-overlay w-100 overlay-content">
                 <h2 class="mb-0 display-2 fw-bold text-uppercase">UPTEMPO</h2>
               </div>
@@ -283,23 +352,35 @@
           </div>
           <div class="col-md-6">
             <div class="mb-4 text-center text-white border-0 card dark-overlay">
-              <img class="card-img" src="../assets/model3.jpeg" alt="Ladies"><a class="tile-link" href="category.html"> </a>
+              <img
+                class="card-img"
+                src="../assets/model3.jpeg"
+                alt="Ladies"
+              /><a class="tile-link" href="category.html"> </a>
               <div class="card-img-overlay d-flex align-items-center">
                 <div class="text-center w-100 overlay-content">
-                  <h2 class="mb-0 text-center display-4 fw-bold text-uppercase">RETRO 4</h2>
+                  <h2 class="mb-0 text-center display-4 fw-bold text-uppercase">
+                    RETRO 4
+                  </h2>
                 </div>
               </div>
             </div>
             <div class="text-center text-white border-0 card dark-overlay">
-              <img class="card-img" src="../assets/model2.jpg" alt="Accessories"><a class="tile-link" href="category.html"> </a>
+              <img
+                class="card-img"
+                src="../assets/model2.jpg"
+                alt="Accessories"
+              /><a class="tile-link" href="category.html"> </a>
               <div class="card-img-overlay d-flex align-items-center">
                 <div class="text-center w-100 overlay-content">
-                  <h2 class="mb-0 text-center display-4 fw-bold text-uppercase">AIR MAX</h2>
+                  <h2 class="mb-0 text-center display-4 fw-bold text-uppercase">
+                    AIR MAX
+                  </h2>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="row">
           <!-- product-->
@@ -353,9 +434,8 @@
 </template>
 
 <style>
-
 .owl-theme.owl-dots-modern .owl-dots .owl-dot.active span {
-  background-color: #1C4C3B !important;
+  background-color: #1c4c3b !important;
 }
 
 .model1img {
@@ -386,7 +466,7 @@
 }
 
 .sectionTitle span {
-  color: #1C4C3B;
+  color: #1c4c3b;
   font-size: 36px;
   font-weight: 600;
 }
@@ -396,7 +476,6 @@
   font-size: 25px;
   font-weight: 400;
 }
-
 
 .bannerTitle {
   padding-top: 170px;
@@ -416,11 +495,10 @@
 
 @media (max-width: 991px) {
   .sectionTitle p {
- 
     font-size: 16px;
     font-weight: 400;
   }
-  
+
   .btnSlider {
     background: rgba(0, 0, 0, 0.4);
     color: white;
@@ -469,12 +547,20 @@ export default {
       fourProducts: [],
       mostWantedProducts: [],
       freeShipping: "",
+      slide: 0,
+      sliding: null,
     };
   },
   mounted() {
     window.scrollTo(0, 0);
   },
   methods: {
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
+    },
     getFourProducts() {
       var loader = this.$loading.show({
         container: this.fullPage ? null : this.$refs.formContainer,
