@@ -302,38 +302,54 @@
 
         <div class="row">
           <!-- product-->
-          <div class="col-lg-3 col-md-4 col-6" v-for="item in fourProducts">
-            <router-link :to="/product/ + item.slug">
-              <div>
-                <div class="product-image" style="border: none !important">
-                  <!-- <div class="ribbon ribbon-info" v-if="item.discount">En oferta</div> -->
-                  <img
-                    class="img-fluid productBorderRadius"
-                    :src="$url + '/getGallery/' + item.image"
-                    alt="product"
-                  />
-                  <div class="product-hover-overlay">
-                    <a class="product-hover-overlay-link" href=""></a>
-                    <div class="product-hover-overlay-buttons">
-                      <a
-                        class="btn btn-dark btn-buy"
-                        style="
-                          background-color: black;
-                          border-radius: 10px;
-                          padding: 12px 10px;
-                          height: fit-content;
-                          line-height: 20px;
-                        "
-                        href=""
-                        ><span class="btn-buy-label ms-2">{{
-                          item.name
-                        }}</span></a
+          <div class="row">
+            <!-- product-->
+            <div class="col-lg-3 col-md-4 col-6" v-for="item in fourProducts">
+              <router-link :to="/product/ + item.slug">
+                <div class="">
+                  <div class="product-image" style="border: none !important">
+                    <div class="ribbon ribbon-info" v-if="item.discount">
+                      En oferta
+                    </div>
+                    <img
+                      class="img-fluid productBorderRadius"
+                      :src="$url + '/getImage/' + item.image"
+                      alt="product"
+                    />
+                    <div
+                      class="product-hover-overlay"
+                      style="border-radius: 4px"
+                    >
+                      <div
+                        class="product-hover-overlay-buttons"
+                        style="border-radius: 4px"
                       >
+                        <a
+                          class="btn btn-dark btn-buy"
+                          style="background-color: #1c4c3b; border-radius: 4px"
+                          href=""
+                          ><span class="btn-buy-label" style="font-size: 11px; letter-spacing: 1px;"
+                            >Ver más</span
+                          ></a
+                        >
+                      </div>
                     </div>
                   </div>
+                  <div class="py-2">
+                    <p class="mb-1 text-sm text-muted">{{ item.category }}</p>
+                    <h3 class="mb-1 h6" style="text-transform: uppercase">
+                      <a class="text-dark" href="detail.html">{{
+                        item.name
+                      }}</a>
+                    </h3>
+                    <span class="text-muted"
+                      >{{ priceConverter(item.price) }}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </router-link>
+              </router-link>
+            </div>
+            <!-- /product-->
           </div>
           <!-- /product-->
         </div>
@@ -423,17 +439,18 @@
                     :src="$url + '/getImage/' + item.image"
                     alt="product"
                   />
-                  <div class="product-hover-overlay">
-                    <a
-                      class="product-hover-overlay-link"
-                      href="detail.html"
-                    ></a>
-                    <div class="product-hover-overlay-buttons">
+                  <div class="product-hover-overlay" style="border-radius: 4px">
+                    <div
+                      class="product-hover-overlay-buttons"
+                      style="border-radius: 4px"
+                    >
                       <a
                         class="btn btn-dark btn-buy"
-                        style="background-color: black; border-radius: 10px"
+                        style="background-color: #1c4c3b; border-radius: 4px"
                         href=""
-                        ><span class="btn-buy-label ms-2">Ver más</span></a
+                        ><span class="btn-buy-label" style="font-size: 11px; letter-spacing: 1px;"
+                          >Ver más</span
+                        ></a
                       >
                     </div>
                   </div>
