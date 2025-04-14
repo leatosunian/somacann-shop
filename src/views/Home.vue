@@ -204,67 +204,85 @@
       </div>
     </section> -->
 
-    <template class="sectionFix">
-      <div>
-        <b-carousel
-          id="carousel-1"
-          v-model="slide"
-          :interval="4000"
-          controls
-          indicators
-          fade="true"
-          background="#00000"
-          img-width="1024"
-          img-height="780"
-          no-hover-pause
-          style="text-shadow: 1px 1px 2px #333"
-          @sliding-start="onSlideStart"
-          @sliding-end="onSlideEnd"
-        >
-          <!-- Text slides with image -->
-          <b-carousel-slide img-src="../assets/banner1test.webp">
-            <div class="container w-full h-full py-6">
-              <div class="row">
-                <div
-                  class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
-                >
-                  <h1 class="mb-4 text-2xl display-2 text-uppercase fw-bold">
-                    Davinci 
-                  </h1>
-                  <p class="mb-5 text-base lead">
-                    Davinci con su arte en el mundo
-                    de la vaporización ha hecho que
-                    sus vaporizadores sean de alta
-                    resistencia y efectividad.
-                  </p>
-                  <p>
-                    <router-link class="btnSlider" to="/products?category=Vaporizadores&subcategory=Davinci"
-                      >Comprar Davinci</router-link>
-                  </p>
-                </div>
+    <section class="sectionFix">
+      <b-carousel
+        id="carousel-1"
+        v-model="slide"
+        :interval="4000"
+        controls
+        indicators
+        fade="true"
+        background="#00000"
+        img-width="1024"
+        img-height="780"
+        no-hover-pause
+        style="text-shadow: 1px 1px 2px #333"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+        <!-- Text slides with image -->
+        <b-carousel-slide img-src="../assets/banner1test.webp">
+          <div class="container w-full h-full py-6">
+            <div class="row">
+              <div
+                class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
+              >
+                <h1 class="mb-4 text-2xl display-2 text-uppercase fw-bold">
+                  Davinci
+                </h1>
+                <p class="mb-5 text-base lead">
+                  Davinci con su arte en el mundo de la vaporización ha hecho
+                  que sus vaporizadores sean de alta resistencia y efectividad.
+                </p>
+                <p>
+                  <router-link
+                    class="btnSlider"
+                    to="/products?category=Vaporizadores&subcategory=Davinci"
+                    >Comprar Davinci</router-link
+                  >
+                </p>
               </div>
             </div>
-          </b-carousel-slide>
+          </div>
+        </b-carousel-slide>
 
-          <!-- Slides with img slot -->
-          <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-          <b-carousel-slide>
-            <template #img>
-              <img
-                class="d-block img-fluid w-100"
-                width="1024"
-                height="480"
-                src="../assets/banner1test.webp"
-                alt="image slot"
-              />
-            </template>
-          </b-carousel-slide>
-
-        </b-carousel>
-
-      </div>
-    </template>
-    
+        <!-- Slides with img slot -->
+        <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+        <b-carousel-slide>
+          <template #img>
+            <img
+              class="d-block img-fluid w-100"
+              width="1024"
+              height="480"
+              src="../assets/banner2test.webp"
+              alt="image slot"
+            />
+          </template>
+          <div class="container w-full h-full py-6">
+            <div class="row">
+              <div
+                class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
+              >
+                <h1 class="mb-4 text-2xl display-2 text-uppercase fw-bold">
+                  G-Pen
+                </h1>
+                <p class="mb-5 text-base lead">
+                  La familia G-Pen tiene sistemas que ayudan a que tu
+                  experiencia sea perfecta.
+                </p>
+                <p>
+                  <router-link
+                    class="btnSlider"
+                    to="/products?category=Vaporizadores&subcategory=Davinci"
+                    >Comprar G-Pen</router-link
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </b-carousel-slide>
+      </b-carousel>
+    </section>
 
     <div class="sectionTitle">
       <span>Últimos ingresos</span>
@@ -323,12 +341,18 @@
     </section>
 
     <div class="sectionTitle">
+      <span></span>
+    </div>
+    <div class="sectionTitle">
       <span>Productos mas vendidos</span>
+      <p class="text-gray-500">
+        Estos son los productos que prefieren nuestros clientes.
+      </p>
     </div>
 
     <section class="py-4 bg-white" style="margin: 70px 0">
       <div class="container">
-        <div class="row">
+        <!-- <div class="row">
           <div class="mx-auto mb-5 text-center col-xl-8">
             <h2>LO MAS VENDIDO</h2>
             <p class="lead text-muted">
@@ -380,7 +404,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="row">
           <!-- product-->
@@ -468,12 +492,14 @@
 .sectionTitle span {
   color: #1c4c3b;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 900;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
 }
 
 .sectionTitle p {
   text-align: center;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 400;
 }
 
