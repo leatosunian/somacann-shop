@@ -211,7 +211,7 @@
         :interval="4000"
         controls
         indicators
-        fade="true"
+        fade
         background="#00000"
         img-width="1024"
         img-height="780"
@@ -313,7 +313,7 @@
                     </div>
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getImage/' + item.image"
+                      :src="$url + '/getGallery/' + item.image"
                       alt="product"
                     />
                     <div
@@ -621,6 +621,7 @@ export default {
           const { data } = response;
           this.fourProducts = data;
           loader.hide();
+          console.log(this.fourProducts);
         })
         .catch((error) => {
           this.msm_error = error.response.data.msg;
@@ -637,7 +638,7 @@ export default {
         .then((response) => {
           const { data } = response;
           this.mostWantedProducts = data;
-          log;
+          console.log(this.mostWantedProducts);
         })
         .catch((error) => {
           console.log(error.response.data.msg);
