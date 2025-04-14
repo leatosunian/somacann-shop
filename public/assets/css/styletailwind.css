@@ -105,7 +105,8 @@
 .btnAdd {
     border-radius: 8px !important;
     color: white !important;
-    background:black !important;
+    background: #1c4c3b !important;
+    padding: 0 5px;
     transition: .3s all ease-in-out !important;
     -webkit-border-radius: 8px !important;
     -moz-border-radius: 8px !important;
@@ -118,8 +119,7 @@
 } 
 
 .btnAdd:hover {
-    color: rgb(255, 93, 23) !important;
-    background:black !important;
+    background:#041C0E !important;
     transition: .3s all ease-in-out !important;
     -webkit-transition: .3s all ease-in-out !important;
     -moz-transition: .3s all ease-in-out !important;

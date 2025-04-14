@@ -304,7 +304,7 @@
           <!-- product-->
           <div class="row">
             <!-- product-->
-            <div class="col-lg-3 col-md-4 col-6" v-for="item in fourProducts">
+            <div class="col-lg-3 col-md-4 col-6" v-for="item in mostWantedProducts">
               <router-link :to="/product/ + item.slug">
                 <div class="">
                   <div class="product-image" style="border: none !important">
@@ -313,7 +313,7 @@
                     </div>
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + item.image"
+                      :src="$url + '/getImage/' + item.image"
                       alt="product"
                     />
                     <div
@@ -608,7 +608,7 @@ export default {
       var loader = this.$loading.show({
         container: this.fullPage ? null : this.$refs.formContainer,
         canCancel: false,
-        color: "orange",
+        color: "#1c4c3b",
         opacity: 1,
       });
       axios
