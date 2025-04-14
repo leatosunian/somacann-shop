@@ -1,31 +1,216 @@
 <template>
   <div>
-    <section>
-      <div class="container-fluid sectionFix bannersCont" >
+    <!-- <section>
+      <div class="container-fluid sectionFix bannersCont">
         <div class="row bannersCont">
-          <!-- BANNER STICKERS -->
-          <router-link to="/products?category=STICKERS#!" class="col-lg-6 dark-overlay split-screen-column align-items-start" style="background-image: url(../assets/banner1low.png); background-color: #d2cecb; text-decoration: none"> 
+          <router-link
+            to="/products?category=STICKERS#!"
+            class="col-lg-6 dark-overlay split-screen-column align-items-start"
+            style="
+              background-image: url(../assets/banner1low.png);
+              background-color: #d2cecb;
+              text-decoration: none;
+            "
+          >
             <div class="mt-7 overlay-content px-lg-5 bannerTitle">
-              <h1 class="text-white display-4 fw-bold split-screen-heading">STICKERS</h1>
+              <h1 class="text-white display-4 fw-bold split-screen-heading">
+                STICKERS
+              </h1>
             </div>
           </router-link>
-          <!-- BANNER PARCHES -->
-          <router-link  to="/products?category=POSTERS#!" class="col-lg-6 dark-overlay split-screen-column align-items-start" style="background-image: url(../assets/banner2low.png); background-color: #e5b6b4; text-decoration: none"> 
-          <!-- <div class="col-lg-6 split-screen-column align-items-center align-items-lg-end" style="background-image: url(../assets/backk2.jpg); background-color: #e5b6b4;">  -->
-            <div class=" overlay-content px-lg-5 mb-lg-5 bannerTitle" >
-              <h1 class=" display-4 fw-bold split-screen-heading" style="color: white;">POSTERS</h1>
+          <router-link
+            to="/products?category=POSTERS#!"
+            class="col-lg-6 dark-overlay split-screen-column align-items-start"
+            style="
+              background-image: url(../assets/banner2low.png);
+              background-color: #e5b6b4;
+              text-decoration: none;
+            "
+          >
+ <div class="col-lg-6 split-screen-column align-items-center align-items-lg-end" style="background-image: url(../assets/backk2.jpg); background-color: #e5b6b4;">  
+            <div class="overlay-content px-lg-5 mb-lg-5 bannerTitle">
+              <h1
+                class="display-4 fw-bold split-screen-heading"
+                style="color: white"
+              >
+                POSTERS
+              </h1>
             </div>
           </router-link>
-
         </div>
+      </div>
+    </section> -->
+
+    <section class="sectionFix">
+      <!-- Hero Slider-->
+      <div
+        class="owl-carousel owl-theme owl-dots-modern home-slider owl-loaded owl-drag"
+      >
+        <div class="owl-stage-outer">
+          <div
+            class="owl-stage"
+            style="
+              transform: translate3d(-3112px, 0px, 0px);
+              transition: all;
+              width: 10892px;
+            "
+          >
+            <div class="owl-item active" style="width: 100%">
+              <div
+                class="item d-flex align-items-center bg-dark dark-overlay"
+                style="height: 800px"
+              >
+                <img
+                  class="bg-image"
+                  src="../assets/banner1test.webp"
+                  alt=""
+                />
+                <div class="container py-6">
+                  <div class="row">
+                    <div
+                      class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
+                    >
+                      <h1 class="mb-4 text-2xl display-2 text-uppercase fw-bold">
+                        Davinci 
+                      </h1>
+                      <p class="mb-5 text-base lead">
+                        Davinci con su arte en el mundo
+                        de la vaporización ha hecho que
+                        sus vaporizadores sean de alta
+                        resistencia y efectividad.
+                      </p>
+                      <p>
+                        <router-link class="btnSlider" to="/products?category=Vaporizadores&subcategory=Davinci"
+                          >Comprar Davinci</router-link>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item " style="width: 1556px">
+              <div
+                class="item d-flex align-items-center"
+                style="height: 800px"
+              >
+                <img
+                  class="bg-image"
+                  src="https://d19m59y37dris4.cloudfront.net/sell/2-0/img/photo/haley-phelps-62815-unsplash.jpg"
+                  alt=""
+                />
+                <div class="container py-6">
+                  <div class="row">
+                    <div
+                      class="mx-auto text-center text-white col-lg-8 col-xl-6 position-relative"
+                    >
+                      <h5 class="mb-4 text-uppercase fw-light letter-spacing-5">
+                        Our bestseller
+                      </h5>
+                      <h1 class="mb-5 display-1 fw-bold text-serif">
+                        Skinny Jeans
+                      </h1>
+                      <p>
+                        <a class="btn btn-light" href="category.html"
+                          >View collection</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item " style="width: 1556px">
+              <div
+                class="item d-flex align-items-center"
+                style="background: rgb(248, 213, 207); height: 800px"
+              >
+                <img
+                  class="bg-image"
+                  src="https://d19m59y37dris4.cloudfront.net/sell/2-0/img/photo/matheus-ferrero-334418-unsplash.jpg"
+                  alt=""
+                />
+                <div class="container py-6">
+                  <div class="row">
+                    <div
+                      class="mx-auto text-center text-white col-lg-8 col-xl-6 position-relative"
+                    >
+                      <h5
+                        class="mb-4 text-white text-uppercase fw-light letter-spacing-5"
+                      >
+                        Just arrived
+                      </h5>
+                      <h1 class="mb-5 display-2 fw-bold text-serif">
+                        Denim Jackets
+                      </h1>
+                      <p class="mb-4 lead">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                      <p>
+                        <a class="btn btn-light" href="category.html"
+                          >View collection</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item" style="width: 1556px">
+              <div
+                class="item d-flex align-items-center bg-dark dark-overlay"
+                style="height: 800px"
+              >
+                <img
+                  class="bg-image"
+                  src="https://d19m59y37dris4.cloudfront.net/sell/2-0/img/photo/ian-dooley-347942-unsplash.jpg"
+                  alt=""
+                />
+                <div class="container py-6">
+                  <div class="row">
+                    <div
+                      class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
+                    >
+                      <h1 class="mb-4 display-2 text-uppercase fw-bold">
+                        Skeleton Tees
+                      </h1>
+                      <p class="mb-5 lead">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                      <p>
+                        <a class="btn btn-light" href="category.html"
+                          >Start shopping</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+        <div class="owl-nav">
+          <button type="button" role="presentation" class="owl-prev">
+            <img src="img/prev.svg" alt="" width="50" /></button
+          ><button type="button" role="presentation" class="owl-next">
+            <img src="img/next.svg" alt="" width="50" />
+          </button>
+        </div>
+        <div class="owl-dots disabled"></div>
+        <div class="owl-thumbs"></div>
       </div>
     </section>
 
     <div class="sectionTitle">
-      <span>NUEVAS CAPSULAS</span>
+      <span>Últimos ingresos</span>
+      <p class="text-gray-500 ">Descubrí las novedades que acaban de llegar a la tienda.</p>
     </div>
 
-    <section class="pb-2 " style="margin: 70px 0">
+    <section class="pb-2" style="margin: 70px 0">
       <div class="container">
         <!-- <div class="row">
           <div class="mx-auto text-center col-xl-8">
@@ -36,32 +221,48 @@
 
         <div class="row">
           <!-- product-->
-          <div class="col-lg-3 col-md-4 col-6" v-for="item in fourProducts" >
-            <router-link :to="/product/+item.slug">
-              <div >
-                <div class="product-image" style="border: none !important;">
+          <div class="col-lg-3 col-md-4 col-6" v-for="item in fourProducts">
+            <router-link :to="/product/ + item.slug">
+              <div>
+                <div class="product-image" style="border: none !important">
                   <!-- <div class="ribbon ribbon-info" v-if="item.discount">En oferta</div> -->
-                  <img class="img-fluid productBorderRadius" :src="$url+'/getGallery/'+item.image" alt="product"/>
-                  <div class="product-hover-overlay"><a class="product-hover-overlay-link" href=""></a>
+                  <img
+                    class="img-fluid productBorderRadius"
+                    :src="$url + '/getGallery/' + item.image"
+                    alt="product"
+                  />
+                  <div class="product-hover-overlay">
+                    <a class="product-hover-overlay-link" href=""></a>
                     <div class="product-hover-overlay-buttons">
-                      <a class="btn btn-dark btn-buy" style="background-color: black; border-radius: 10px; padding: 12px 10px; height: fit-content; line-height: 20px;" href=""><span class="btn-buy-label ms-2">{{item.name}}</span></a>
+                      <a
+                        class="btn btn-dark btn-buy"
+                        style="
+                          background-color: black;
+                          border-radius: 10px;
+                          padding: 12px 10px;
+                          height: fit-content;
+                          line-height: 20px;
+                        "
+                        href=""
+                        ><span class="btn-buy-label ms-2">{{
+                          item.name
+                        }}</span></a
+                      >
                     </div>
                   </div>
                 </div>
-
               </div>
             </router-link>
           </div>
           <!-- /product-->
         </div>
-
       </div>
     </section>
 
     <div class="sectionTitle">
-      <span>LO MAS VENDIDO</span>
+      <span>Productos mas vendidos</span>
     </div>
-    
+
     <section class="py-4 bg-white" style="margin: 70px 0">
       <div class="container">
         <!-- <div class="row">
@@ -102,164 +303,226 @@
 
         <div class="row">
           <!-- product-->
-          <div class="col-lg-3 col-md-4 col-6" v-for="item in mostWantedProducts" >
-            <router-link :to="/product/+item.slug">
+          <div
+            class="col-lg-3 col-md-4 col-6"
+            v-for="item in mostWantedProducts"
+          >
+            <router-link :to="/product/ + item.slug">
               <div class="">
-                <div class="product-image" style="border: none !important;">
-                  <div class="ribbon ribbon-info" v-if="item.discount">En oferta</div>
-                  <img class="img-fluid productBorderRadius" :src="$url+'/getImage/'+item.image" alt="product"/>
-                  <div class="product-hover-overlay"><a class="product-hover-overlay-link" href="detail.html"></a>
-                    <div class="product-hover-overlay-buttons" >
-                      <a class="btn btn-dark btn-buy" style="background-color: black; border-radius: 10px;" href=""><span class="btn-buy-label ms-2">Ver más</span></a>
+                <div class="product-image" style="border: none !important">
+                  <div class="ribbon ribbon-info" v-if="item.discount">
+                    En oferta
+                  </div>
+                  <img
+                    class="img-fluid productBorderRadius"
+                    :src="$url + '/getImage/' + item.image"
+                    alt="product"
+                  />
+                  <div class="product-hover-overlay">
+                    <a
+                      class="product-hover-overlay-link"
+                      href="detail.html"
+                    ></a>
+                    <div class="product-hover-overlay-buttons">
+                      <a
+                        class="btn btn-dark btn-buy"
+                        style="background-color: black; border-radius: 10px"
+                        href=""
+                        ><span class="btn-buy-label ms-2">Ver más</span></a
+                      >
                     </div>
                   </div>
                 </div>
                 <div class="py-2">
-                  <p class="mb-1 text-sm text-muted">{{item.category}}</p>
-                  <h3 class="mb-1 h6" style="text-transform:uppercase;">
-                    <a class="text-dark" href="detail.html">{{item.name}}</a>
+                  <p class="mb-1 text-sm text-muted">{{ item.category }}</p>
+                  <h3 class="mb-1 h6" style="text-transform: uppercase">
+                    <a class="text-dark" href="detail.html">{{ item.name }}</a>
                   </h3>
-                  <span class="text-muted">{{ priceConverter(item.price) }} </span>
+                  <span class="text-muted"
+                    >{{ priceConverter(item.price) }}
+                  </span>
                 </div>
               </div>
             </router-link>
           </div>
           <!-- /product-->
         </div>
-
       </div>
     </section>
-
   </div>
 </template>
 
 <style>
-  .model1img{
-    background: center center url('../assets/model1.jpg') no-repeat; background-size: cover;
-  }
-  .product-image{
-    display: block;
-    position: relative;
-    overflow: hidden;
-    height: 320px;
-  }
-  .sectionFix{
-    margin-top: 0px;
-  }
 
-  .sectionTitle {
-    width: 100%; 
-    padding-bottom:8px; 
-    height: 100px; 
-    background-color:black; 
-    display:flex; 
-    justify-content: center; 
-    align-items: center;
-  }
+.owl-theme.owl-dots-modern .owl-dots .owl-dot.active span {
+  background-color: #1C4C3B !important;
+}
 
-  .sectionTitle span {
-    color:rgb(254, 75, 0); 
-    font-size:40px; 
-    font-weight:600;
+.model1img {
+  background: center center url("../assets/model1.jpg") no-repeat;
+  background-size: cover;
+}
+.product-image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+}
+.sectionFix {
+  margin-top: 97px;
+}
+
+.sectionTitle {
+  width: 100%;
+  padding-bottom: 8px;
+  height: fit-content;
+  background-color: white;
+  display: flex;
+  gap: 5px;
+  margin-top: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionTitle span {
+  color: #1C4C3B;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.sectionTitle p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+.bannerTitle {
+  padding-top: 170px;
+  margin: 0 auto !important;
+}
+
+.btnSlider {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+@media (max-width: 991px) {
+  .sectionTitle p {
+ 
+    font-size: 16px;
+    font-weight: 400;
   }
   
-
+  .btnSlider {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 10px 20px;
+    font-size: 11px;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    text-transform: uppercase;
+    border-radius: 8px;
+  }
+  .sectionFix {
+    margin-top: 93.38px;
+  }
+  .bannersCont {
+    height: calc(100vh - 91.38px);
+  }
+  .sectionTitle {
+    padding-bottom: 8px;
+    height: 70px;
+    padding-bottom: 4px;
+  }
+  .sectionTitle span {
+    font-size: 24px;
+    font-weight: 600;
+  }
   .bannerTitle {
-    padding-top:170px ;
-    margin: 0 auto !important;
-
+    padding-top: 35px;
   }
-
-  @media (max-width:991px){
-    .sectionFix{
-      margin-top: 91.38px;
-    }
-    .bannersCont {
-      height: calc(100vh - 91.38px);
-    }
-    .sectionTitle {
-      padding-bottom:8px; 
-      height: 70px; 
-      padding-bottom: 4px;
-    }
-    .sectionTitle span {
-      font-size:24px; 
-      font-weight:600;
-    }
-    .bannerTitle {
-      padding-top:35px ;
-    }
-  }
+}
 </style>
 
 <script>
 // @ is an alias to /src
-import axios from 'axios'
-import currencyFormatter from 'currency-formatter'
-import { initCarousel } from '../../public/assets/js/theme.d7b4a888'
-import carousel from 'vue-owl-carousel'
+import axios from "axios";
+import currencyFormatter from "currency-formatter";
+import { initCarousel } from "../../public/assets/js/theme.d7b4a888";
+import carousel from "vue-owl-carousel";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    carousel
+    carousel,
   },
-  data(){
+  data() {
     return {
       fourProducts: [],
       mostWantedProducts: [],
-      freeShipping: ''
-    }
+      freeShipping: "",
+    };
   },
-  mounted () {
-  window.scrollTo(0, 0)
+  mounted() {
+    window.scrollTo(0, 0);
   },
   methods: {
-    getFourProducts(){
+    getFourProducts() {
       var loader = this.$loading.show({
         container: this.fullPage ? null : this.$refs.formContainer,
         canCancel: false,
         color: "orange",
-        opacity: 1
+        opacity: 1,
       });
-      axios.get(this.$url+'/public/getLatestProducts', {
-        headers: {
-          "Content-Type": 'application/json',
-        }
-        }).then((response) => {
-          const {data} = response
-          this.fourProducts = data
-          loader.hide()
-        }).catch( error => {
-          this.msm_error = error.response.data.msg
-          loader.hide()
+      axios
+        .get(this.$url + "/public/getLatestProducts", {
+          headers: {
+            "Content-Type": "application/json",
+          },
         })
-        
+        .then((response) => {
+          const { data } = response;
+          this.fourProducts = data;
+          loader.hide();
+        })
+        .catch((error) => {
+          this.msm_error = error.response.data.msg;
+          loader.hide();
+        });
     },
-    getMostWantedProducts(){
-      axios.get(this.$url+'/public/getMostWantedProducts', {
-            headers: {
-              "Content-Type": 'application/json',
-            }
-            }).then((response) => {
-              const {data} = response
-              this.mostWantedProducts = data
-              log
-            }).catch( error => {
-              console.log(error.response.data.msg)
-              this.msm_error = error.response.data.msg
-               
-            })
+    getMostWantedProducts() {
+      axios
+        .get(this.$url + "/public/getMostWantedProducts", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        .then((response) => {
+          const { data } = response;
+          this.mostWantedProducts = data;
+          log;
+        })
+        .catch((error) => {
+          console.log(error.response.data.msg);
+          this.msm_error = error.response.data.msg;
+        });
     },
-    priceConverter(price){
-        return currencyFormatter.format(price, { code: 'ARS' });
-
+    priceConverter(price) {
+      return currencyFormatter.format(price, { code: "ARS" });
     },
   },
-  beforeMount(){
-    this.getFourProducts()
-    this.getMostWantedProducts()
-    initCarousel.init()
-  }
-}
+  beforeMount() {
+    this.getFourProducts();
+    this.getMostWantedProducts();
+    initCarousel.init();
+  },
+};
 </script>

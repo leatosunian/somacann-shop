@@ -2,28 +2,28 @@
   <header class="header header-absolute" >
       
       <!-- Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-sticky navbar-airy navbar-dark bg-fixed-white navbar-fixed-light" style="background:#000000" >
+      <nav class="navbar navbar-expand-lg navbar-sticky navbar-airy navbar-dark bg-fixed-white navbar-fixed-light" style="background:#000502" >
         <div class="container-fluid">  
           <!-- Navbar Header  -->
           <router-link class="navbar-brand"  style="heigth:fit-content!important;" to="/">
-            <img src="@/assets/logowhite.png" class="logoImg" alt="">
+            <img src="@/assets/longWhite.png" class="logoImg" alt="">
             <!-- <img src="@/assets/new-deco.png" class="logoImg" style="width:41px!important;" alt=""> -->
           </router-link>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" style="margin-bottom: 4px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <img src="@/assets/menu.png" style="width: 20px; margin:auto" alt="">
           </button>
           <!-- Navbar Collapse -->
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="mx-auto navbar-nav">
               <li v-on:click="toHome()" class="nav-item" >
-                <router-link  to="/" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" class="nav-link"  >Inicio</router-link>
+                <router-link  to="/" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" class="text-sm nav-link"  >Inicio</router-link>
               </li>
               <li v-on:click="toProducts()" class="nav-item">
-                <router-link to="/products" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" class="nav-link">Productos</router-link>
+                <router-link to="/products" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" class="text-sm nav-link">Productos</router-link>
               </li>
               
               <!-- Megamenu-->
-              <li class="nav-item dropdown position-static"><a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Categorias</a>
+              <li class="nav-item dropdown position-static"><a class="text-sm nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Categorias</a>
                 <div class="dropdown-menu dropdown-menu-animated megamenu " style="left: auto !important;">
                   <div class="row" >
                     <div class="col-lg-12">
@@ -171,7 +171,7 @@
       <!-- bottom Bar-->
       <div class="top-bar" style="height: 35px !important;">
         <div class="container-fluid"  style="height: 38px !important;">
-          <div class="justify-content-center row d-flex align-items-center" style="height: 35px !important; background-color:rgb(254, 75, 0)">
+          <div class="justify-content-center row d-flex align-items-center" style="height: 35px !important; background-color:#1C4C3B;">
             <span class="text-white text-uppercase" style="font-size:.83rem; font-weight:600; width:fit-content; letter-spacing:0px;">
               <span style="text-decoration:underline"> Envio gratis</span> 
                con tu compra superior a 
@@ -262,13 +262,14 @@ line-height: 20px;
 color: rgba(255, 255, 255, 1);
 }
 
-.navbar-light .navbar-icon-link-badge, .navbar-fixed-light.fixed-top .navbar-icon-link-badge, .navbar-hover-light:hover .navbar-icon-link-badge {
-color: #000;
-background: #ffffff;
+.navbar-dark .navbar-icon-link-badge, .navbar-fixed-light.fixed-top .navbar-icon-link-badge, .navbar-hover-light:hover .navbar-icon-link-badge {
+color: white;
+background: #1C4C3B;
 }
 
 .navbar-light .navbar-nav .nav-link, .navbar-hover-light:hover .navbar-nav .nav-link, .navbar-fixed-light.fixed-top .navbar-nav .nav-link {
 color:  rgba(255, 255, 255, 1);
+font-weight: 300;
 }
 
 .navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active, .navbar-hover-light:hover .navbar-nav .show>.nav-link, .navbar-hover-light:hover .navbar-nav .active>.nav-link, .navbar-hover-light:hover .navbar-nav .nav-link.show, .navbar-hover-light:hover .navbar-nav .nav-link.active, .navbar-fixed-light.fixed-top .navbar-nav .show>.nav-link, .navbar-fixed-light.fixed-top .navbar-nav .active>.nav-link, .navbar-fixed-light.fixed-top .navbar-nav .nav-link.show, .navbar-fixed-light.fixed-top .navbar-nav .nav-link.active{
@@ -289,9 +290,8 @@ background: right center url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http
   padding: 10px 10px !important;
 }
 .logoImg{
-  width: 85px;
-  margin: auto 0px;
-  margin-bottom: 0px;
+  width: 130px;
+  margin: 10px 0;
 }
 .navbar {
   padding-left: 5.6rem !important;
@@ -325,7 +325,8 @@ background: right center url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http
 }
 
 .logoImg{
-  width: 57px;
+  width: 110px;
+  margin: 12px 0 10px 0;
 }
 }
 </style>
