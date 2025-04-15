@@ -168,7 +168,7 @@ export default {
                 var loader = this.$loading.show({
                     container: this.fullPage ? null : this.$refs.formContainer,
                     canCancel: false,
-                    color: "orange",
+                    color: "#1c4c3b",
                     opacity: 1
                 });
             }

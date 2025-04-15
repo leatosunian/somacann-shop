@@ -216,6 +216,7 @@
         img-width="1024"
         img-height="780"
         no-hover-pause
+        class="desktopCarousel"
         style="text-shadow: 1px 1px 2px #333"
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
@@ -227,7 +228,10 @@
               <div
                 class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
               >
-                <h1 class="mb-4 text-2xl display-2 text-uppercase fw-bold">
+                <h1
+                  class="mb-4 display-2 text-uppercase fw-bold"
+                  style="font-size: 50px"
+                >
                   Davinci
                 </h1>
                 <p class="mb-5 text-base lead">
@@ -263,7 +267,96 @@
               <div
                 class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
               >
-                <h1 class="mb-4 text-2xl display-2 text-uppercase fw-bold">
+                <h1
+                  class="mb-4 display-2 text-uppercase fw-bold"
+                  style="font-size: 50px"
+                >
+                  G-Pen
+                </h1>
+                <p class="mb-5 text-base lead">
+                  La familia G-Pen tiene sistemas que ayudan a que tu
+                  experiencia sea perfecta.
+                </p>
+                <p>
+                  <router-link
+                    class="btnSlider"
+                    to="/products?category=Vaporizadores&subcategory=Davinci"
+                    >Comprar G-Pen</router-link
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </b-carousel-slide>
+      </b-carousel>
+
+      <b-carousel
+        id="carousel-1"
+        v-model="slide"
+        :interval="4000"
+        controls
+        indicators
+        fade
+        background="#00000"
+        img-width="1024"
+        img-height="780"
+        no-hover-pause
+        class="mobileCarousel"
+        style="text-shadow: 1px 1px 2px #333"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+        <!-- Text slides with image -->
+        <b-carousel-slide img-src="../assets/banner1testmobile.webp">
+          <div class="container w-full h-full py-6">
+            <div class="row">
+              <div
+                class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
+              >
+                <h1
+                  class="mb-4 display-2 text-uppercase fw-bold"
+                  style="font-size: 50px"
+                >
+                  Davinci
+                </h1>
+                <p class="mb-5 text-base lead">
+                  Davinci con su arte en el mundo de la vaporización ha hecho
+                  que sus vaporizadores sean de alta resistencia y efectividad.
+                </p>
+                <p>
+                  <router-link
+                    class="btnSlider"
+                    to="/products?category=Vaporizadores&subcategory=Davinci"
+                    >Comprar Davinci</router-link
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </b-carousel-slide>
+
+        <!-- Slides with img slot -->
+        <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+         
+        <b-carousel-slide >
+          <template #img>
+            <img
+              class="d-block img-fluid w-100"
+              width="1024"
+              height="480"
+              src="../assets/banner2testmobile.webp"
+              alt="image slot"
+            />
+          </template>
+          <div class="container w-full h-full py-6">
+            <div class="row">
+              <div
+                class="mx-auto text-center text-white col-lg-8 col-xl-6 overlay-content"
+              >
+                <h1
+                  class="mb-4 display-2 text-uppercase fw-bold"
+                  style="font-size: 50px"
+                >
                   G-Pen
                 </h1>
                 <p class="mb-5 text-base lead">
@@ -284,7 +377,7 @@
       </b-carousel>
     </section>
 
-    <div class="sectionTitle">
+    <div style="margin-top: 80px;" class="sectionTitle" >
       <span>Últimos ingresos</span>
       <p class="text-gray-500">
         Descubrí las novedades que acaban de llegar a la tienda.
@@ -304,7 +397,10 @@
           <!-- product-->
           <div class="row">
             <!-- product-->
-            <div class="col-lg-3 col-md-4 col-6" v-for="item in mostWantedProducts">
+            <div
+              class="col-lg-3 col-md-4 col-6"
+              v-for="item in mostWantedProducts"
+            >
               <router-link :to="/product/ + item.slug">
                 <div class="">
                   <div class="product-image" style="border: none !important">
@@ -328,7 +424,9 @@
                           class="btn btn-dark btn-buy"
                           style="background-color: #1c4c3b; border-radius: 4px"
                           href=""
-                          ><span class="btn-buy-label" style="font-size: 11px; letter-spacing: 1px;"
+                          ><span
+                            class="btn-buy-label"
+                            style="font-size: 11px; letter-spacing: 1px"
                             >Ver más</span
                           ></a
                         >
@@ -448,7 +546,9 @@
                         class="btn btn-dark btn-buy"
                         style="background-color: #1c4c3b; border-radius: 4px"
                         href=""
-                        ><span class="btn-buy-label" style="font-size: 11px; letter-spacing: 1px;"
+                        ><span
+                          class="btn-buy-label"
+                          style="font-size: 11px; letter-spacing: 1px"
                           >Ver más</span
                         ></a
                       >
@@ -490,7 +590,7 @@
   height: 320px;
 }
 .sectionFix {
-  margin-top: 97px;
+  margin-top: 95px;
 }
 
 .sectionTitle {
@@ -508,7 +608,7 @@
 
 .sectionTitle span {
   color: #1c4c3b;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 900;
   letter-spacing: 0.1px;
   text-transform: uppercase;
@@ -516,7 +616,7 @@
 
 .sectionTitle p {
   text-align: center;
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -536,10 +636,36 @@
   border-radius: 8px;
 }
 
+.desktopCarousel {
+  display: block;
+}
+
+.mobileCarousel {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .desktopCarousel {
+    display: none;
+  }
+  
+  .mobileCarousel {
+    display: block;
+  }
+}
+
 @media (max-width: 991px) {
   .sectionTitle p {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  .desktopCarousel {
+    display: none;
+  }
+  
+  .mobileCarousel {
+    display: block;
   }
 
   .btnSlider {

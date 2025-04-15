@@ -16,14 +16,14 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="mx-auto navbar-nav">
               <li v-on:click="toHome()" class="nav-item" >
-                <router-link  to="/" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" class="text-sm nav-link"  >Inicio</router-link>
+                <router-link  to="/" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" style="font-size: 12.4px; letter-spacing:1px; font-weight:600;" class="nav-link"  >Inicio</router-link>
               </li>
               <li v-on:click="toProducts()" class="nav-item">
-                <router-link to="/products" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" class="text-sm nav-link">Productos</router-link>
+                <router-link to="/products" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" style="font-size: 12.4px; letter-spacing:1px; font-weight:600;" class="nav-link">Productos</router-link>
               </li>
               
               <!-- Megamenu-->
-              <li class="nav-item dropdown position-static"><a class="text-sm nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Categorias</a>
+              <li class="nav-item dropdown position-static"><a style="font-size: 12.4px; letter-spacing:1px; font-weight:600;" class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Categorias</a>
                 <div class="dropdown-menu dropdown-menu-animated megamenu " style="left: auto !important;">
                   <div class="row" >
                     <div class="col-lg-12">
@@ -172,7 +172,7 @@
       <div class="top-bar" style="height: 35px !important;">
         <div class="container-fluid"  style="height: 38px !important;">
           <div class="justify-content-center row d-flex align-items-center" style="height: 35px !important; background-color:#1C4C3B;">
-            <span class="text-white text-uppercase" style="font-size:.83rem; font-weight:600; width:fit-content; letter-spacing:0px;">
+            <span class="text-white text-uppercase" style="font-size:.7rem; font-weight:600; width:fit-content; letter-spacing:0px;">
               <span style="text-decoration:underline"> Envio gratis</span> 
                con tu compra superior a 
               <span style="text-decoration:underline"> ${{freeShipping}} </span> 
@@ -290,7 +290,7 @@ background: right center url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http
   padding: 10px 10px !important;
 }
 .logoImg{
-  width: 130px;
+  width: 120px;
   margin: 10px 0;
 }
 .navbar {

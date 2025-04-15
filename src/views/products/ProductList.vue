@@ -667,9 +667,19 @@
   border-bottom: 1px solid #474747 !important;
 }
 
+.breadcrumb{
+  padding: 1rem 0 !important;
+}
+
 .block-toggler[data-bs-toggle="collapse"]::before {
   display: none;
 }
+
+.page-item.active .page-link {
+  background-color: #1c4c3b !important;
+  color: white !important;
+}
+
 </style>
 
 <script>
@@ -946,8 +956,10 @@ export default {
 }
 
 .page-item.active .page-link {
-  background-color: black !important;
+  background-color: #1c4c3b !important;
   color: white !important;
+  border: none;
+  font-size: 12px;
 }
 
 .subcatActive {
