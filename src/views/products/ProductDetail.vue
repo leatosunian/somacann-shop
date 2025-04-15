@@ -481,7 +481,7 @@
     <section class="my-5">
       <div class="container">
         <header class="text-center">
-          <h6 class="mb-5 text-uppercase">Tal vez te guste</h6>
+          <h6 class="mb-5 text-uppercase" style="color:#1c4c3b; letter-spacing:1px; font-size:20px;">Tal vez te guste</h6>
         </header>
         <div class="row">
           <!-- product-->
