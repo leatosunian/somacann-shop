@@ -273,7 +273,7 @@
                   >{{ product[0].subcategory }}</router-link
                 >
               </li>
-              <li class="breadcrumb-item active">{{ product[0].name }}</li>
+              <li class="breadcrumb-item active" >{{ product[0].name }}</li>
             </ul>
             <h1 class="mb-4 productName">{{ product[0].name }}</h1>
             <div
@@ -281,16 +281,16 @@
             >
               <ul class="mb-2 list-inline mb-sm-0">
                 <li
-                  class="mb-0 list-inline-item h3 fw-light"
+                  class="mb-0 list-inline-item h3 fw-normal"
                   v-if="USDEnabled == false"
                 >
-                  {{ priceConverter(product[0].price * USDData.value) }}
+                 AR{{  priceConverter(product[0].price * USDData.value) }}
                 </li>
                 <li
-                  class="mb-0 list-inline-item h3 fw-light"
+                  class="mb-0 list-inline-item h3 fw-normal"
                   v-if="USDEnabled == true"
                 >
-                  {{ priceConverter(product[0].price) }}
+                 AR{{  priceConverter(product[0].price) }}
                 </li>
                 <li class="list-inline-item text-muted fw-light">
                   <del v-if="product[0].discount">{{
@@ -541,21 +541,26 @@
 
 <style>
 .bgVariant {
-  color: orange;
-  border: 1px solid orange;
+  color: #1C4C3B;
+  border: 1px solid #1C4C3B;
 }
 
 .productName {
-  font-size: 48px;
+  font-size: 44px;
+}
+
+
+.owl-carousel .owl-stage-outer {
+  max-height: 70vh !important;
 }
 
 .owl-theme.owl-dots-modern .owl-dots .owl-dot.active span {
-  background-color: orange !important;
+  background-color: #1C4C3B !important;
 }
 
 @media (max-width: 991px) {
   .productName {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 </style>

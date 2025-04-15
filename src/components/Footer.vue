@@ -8,7 +8,7 @@
       >
         <div class="container px-4">
           <div class="row">
-            <div class="mb-5 col-lg-5 mb-lg-0">
+            <div class="mb-4 col-lg-5 mb-lg-0">
               <img
                 src="/assets/cannabicaLong.png"
                 style="width: 300px"
@@ -17,7 +17,7 @@
               <!-- <img src="@/assets/new-deco.png" class="logoImg" style="width:47px!important;" alt=""> -->
             </div>
 
-            <div class="mb-3 col-lg-2 col-md-6 mb-lg-0">
+            <div class="mb-4 col-lg-2 col-md-6 mb-lg-0">
               <h6 class="mb-3 text-white text-uppercase">Shop</h6>
               <ul style="margin-bottom: 0px" class="list-unstyled">
                 <li>
@@ -30,7 +30,7 @@
                 </li>
                 <li>
                   <router-link
-                    to="/products?category=PARCHES#!"
+                    to="/products"
                     class="text-white orangeHover"
                     href="#"
                     >Todos los productos</router-link
@@ -38,7 +38,7 @@
                 </li>
                 <li>
                   <router-link
-                    to="/products?category=PARCHES#!"
+                    to="/products?category=Vaporizadores"
                     class="text-white orangeHover"
                     href="#"
                     >Vaporizadores</router-link
@@ -47,7 +47,7 @@
               </ul>
             </div>
 
-            <div class="mb-3 col-lg-2 col-md-6 mb-lg-0">
+            <div class="mb-5 col-lg-2 col-md-6 mb-lg-0">
               <h6 class="mb-3 text-white text-uppercase">Clientes</h6>
               <ul style="margin-bottom: 0px" class="list-unstyled">
                 <li>

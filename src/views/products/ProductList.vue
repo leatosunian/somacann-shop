@@ -919,6 +919,11 @@ export default {
 </script>
 
 <style>
+
+.hero-heading {
+  margin-bottom: 1rem;
+}
+
 .product-image {
   height: fit-content !important;
 }
