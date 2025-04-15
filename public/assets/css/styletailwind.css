@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-image: url('/assets/background.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: repeat;
+  }
+
 .alert{
     width: 60%;
     height: 40px;

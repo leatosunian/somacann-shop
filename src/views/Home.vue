@@ -221,6 +221,18 @@
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
+      <b-carousel-slide>
+        <template #img>
+          <img
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="480"
+            src="../assets/bannerSomaWeb.jpg"
+            alt="image slot"
+          />
+        </template>
+      </b-carousel-slide>
+
         <!-- Text slides with image -->
         <b-carousel-slide img-src="../assets/banner1test.webp">
           <div class="container w-full h-full py-6">
@@ -293,7 +305,7 @@
       <b-carousel
         id="carousel-1"
         v-model="slide"
-        :interval="4000"
+        :interval="5000"
         controls
         indicators
         fade
@@ -306,6 +318,18 @@
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
+        <b-carousel-slide>
+          <template #img>
+            <img
+              class="d-block img-fluid w-100"
+              width="1024"
+              height="480"
+              src="../assets/bannerSomaMobile.jpg"
+              alt="image slot"
+            />
+          </template>
+        </b-carousel-slide>
+
         <!-- Text slides with image -->
         <b-carousel-slide img-src="../assets/banner1testmobile.webp">
           <div class="container w-full h-full py-6">
@@ -337,8 +361,8 @@
 
         <!-- Slides with img slot -->
         <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-         
-        <b-carousel-slide >
+
+        <b-carousel-slide>
           <template #img>
             <img
               class="d-block img-fluid w-100"
@@ -377,7 +401,7 @@
       </b-carousel>
     </section>
 
-    <div style="margin-top: 80px;" class="sectionTitle" >
+    <div style="margin-top: 80px" class="sectionTitle">
       <span>Últimos ingresos</span>
       <p class="text-gray-500">
         Descubrí las novedades que acaban de llegar a la tienda.
@@ -464,7 +488,7 @@
       </p>
     </div>
 
-    <section class="py-4 bg-white" style="margin: 70px 0">
+    <section class="py-4" style="margin: 70px 0">
       <div class="container">
         <!-- <div class="row">
           <div class="mx-auto mb-5 text-center col-xl-8">
@@ -597,7 +621,6 @@
   width: 100%;
   padding-bottom: 8px;
   height: fit-content;
-  background-color: white;
   display: flex;
   gap: 5px;
   margin-top: 40px;
@@ -648,7 +671,7 @@
   .desktopCarousel {
     display: none;
   }
-  
+
   .mobileCarousel {
     display: block;
   }
@@ -663,7 +686,7 @@
   .desktopCarousel {
     display: none;
   }
-  
+
   .mobileCarousel {
     display: block;
   }
