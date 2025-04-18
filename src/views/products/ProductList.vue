@@ -200,6 +200,7 @@
                         to="/products"
                         class="textLink"
                         style="
+                          color: #1c4c3b !important;
                           font-weight: 600;
                           font-size: 17px;
                           margin-left: 1px !important;
@@ -667,7 +668,7 @@
   border-bottom: 1px solid #474747 !important;
 }
 
-.breadcrumb{
+.breadcrumb {
   padding: 1rem 0 !important;
 }
 
@@ -679,7 +680,6 @@
   background-color: #1c4c3b !important;
   color: white !important;
 }
-
 </style>
 
 <script>
@@ -919,7 +919,6 @@ export default {
 </script>
 
 <style>
-
 .hero-heading {
   margin-bottom: 1rem;
 }

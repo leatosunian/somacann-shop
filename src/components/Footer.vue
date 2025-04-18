@@ -168,7 +168,7 @@
                 </a>
                 <a
                   class="text-muted text-decoration-none"
-                  href="https://api.whatsapp.com/send/?phone=5492804240513&text&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=5492236060459&text&type=phone_number&app_absent=0"
                   target="_blank"
                   title="Whatsapp"
                 >
@@ -177,7 +177,7 @@
                     alt=""
                     style="width: 20px; margin-right: 8px"
                   />
-                  <span class="text-white orangeHover">+54 9 280 424-0513</span>
+                  <span class="text-white orangeHover">+54 9 223 606-0459</span>
                 </a>
                 <div class="flex">
                   <img

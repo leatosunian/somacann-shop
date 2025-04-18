@@ -481,30 +481,40 @@
     <div class="sectionTitle">
       <span>Vaporizadores</span>
       <p class="text-gray-500">
-        Disfrutá de una experiencia única de vapeo con nuestra amplia variedad de productos.
+        Disfrutá de una experiencia única de vapeo con nuestra amplia variedad
+        de productos.
       </p>
     </div>
 
     <div class="categoriesBanner">
-      <div class="categoriesBannerItem">
-        <img src="../assets/ENAILS.png" alt="" />
-        <span>E-Nails</span>
-      </div>
+      <router-link to="/products?filter=herbal" style="text-decoration: none">
+        <div class="categoriesBannerItem">
+          <img src="../assets/HERBALES.png" alt="" />
+          <span>Herbales</span>
+        </div>
+      </router-link>
+      <router-link to="/products?filter=pen" style="text-decoration: none">
+        <div class="categoriesBannerItem">
+          <img src="../assets/PEN.png" alt="" />
+          <span>Pen</span>
+        </div>
+      </router-link>
+      <router-link to="/products?filter=e-nail" style="text-decoration: none">
+        <div class="categoriesBannerItem">
+          <img src="../assets/ENAILS.png" alt="" />
+          <span>E-Nails</span>
+        </div>
+      </router-link>
 
-      <div class="categoriesBannerItem">
-        <img src="../assets/PEN.png" alt="" />
-        <span>Pen</span>
-      </div>
-
-      <div class="categoriesBannerItem">
-        <img src="../assets/ESCRITORIO.png" alt="" />
-        <span>Escritorio</span>
-      </div>
-
-      <div class="categoriesBannerItem">
-        <img src="../assets/HERBALES.png" alt="" />
-        <span>Herbales</span>
-      </div>
+      <router-link
+        to="/products?filter=escritorio"
+        style="text-decoration: none"
+      >
+        <div class="categoriesBannerItem">
+          <img src="../assets/ESCRITORIO.png" alt="" />
+          <span>Escritorio</span>
+        </div>
+      </router-link>
     </div>
 
     <div class="sectionTitle">
