@@ -28,7 +28,7 @@
             
                 <div class="block">
                   <!-- Invoice Address-->
-                  <div class="block-header">
+                  <div class="block-header"  style="background-color: transparent !important;">
                     <h6 class="mb-0 text-uppercase">Agregar domicilio de envío</h6>
                   </div>
                   <div class="block-body">

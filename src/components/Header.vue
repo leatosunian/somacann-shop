@@ -83,7 +83,7 @@
 
                     <a v-if="loggedIn" class="navbar-icon-link dropdown desktop" >
                       <img src="/assets/icons/user.png" style="width: 25px;" />
-                      <span class="text-sm ms-2 ms-lg-0 text-uppercase fw-bold d-none d-sm-inline dropdown-toggle" data-bs-target="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp; {{username.split(' ')[0]}}</span>
+                      <span class="text-sm ms-2 ms-lg-0 text-uppercase fw-bold d-none d-sm-inline dropdown-toggle" data-bs-target="#" style="letter-spacing: .5px !important; font-size:13px !important;" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp; {{username.split(' ')[0]}}</span>
                       <div class="dropdown-menu dropdown-menu-animated" aria-labelledby="categoryDropdownMenuLink" style="left:-20px!important; bottom:45px!important; ">
                         <router-link class="dropdown-item" style="background-color:white;" to="/profile/address">Mis domicilios</router-link>
                         <router-link class="dropdown-item" style="background-color:white;" to="/profile/orders" >Mis pedidos</router-link>
@@ -195,10 +195,12 @@
   font-size: .6875rem;
   color: black;
   transition: all .3s ease-in-out;
+  font-weight: 600;
+
 }
 
 .viewCartBtn:hover {
-  color: rgb(250, 84, 12);
+  color: #1C4C3B;
   text-decoration: none;
   transition: all .3s ease-in-out;
 }
@@ -212,7 +214,7 @@
   border-radius: 5px;
   width: fit-content;
   height: fit-content;
-  background-color: #000;
+  background-color: #1C4C3B;
   color:white;
   text-decoration: none;
   transition: all .3s ease-in-out;
@@ -220,7 +222,7 @@
 }
 
 .cartBuyBtn:hover{
-  color: rgb(250, 84, 12);
+  color: white;
   text-decoration: none;
   transition: all .3s ease-in-out
 }
