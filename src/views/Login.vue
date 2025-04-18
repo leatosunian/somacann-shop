@@ -151,12 +151,12 @@ export default {
     },
     methods: {
       validateReg(){
-        loading_ = false;
+        this.loading_ = true;
         if(!this.newClient.name || !this.newClient.email || !this.newClient.password || !this.newClient.confPassword){
           this.pass= true
           this.msm_error = '¡Todos los campos son obligatorios!'
           this.valid= false
-          loading_ = false;
+          this.loading_ = false;
           setTimeout(() => {
             this.valid = true
           }, 3000);
@@ -166,7 +166,7 @@ export default {
           this.msm_error = 'Ingresá tu nombre y apellido'
           this.valid= false 
           this.pass= false
-          loading_ = false;
+          this.loading_ = false;
           setTimeout(() => {
             this.valid = true
           }, 3000);
@@ -175,7 +175,7 @@ export default {
           this.msm_error = 'Las contraseñas deben ser iguales.'
           this.valid= false 
           this.pass= false
-          loading_ = false;
+          this.loading_ = false;
           setTimeout(() => {
             this.valid = true
           }, 3000);
@@ -192,14 +192,14 @@ export default {
               this.msg = data.msg
               this.valid= true
               this.added = true
-              loading_ = false;
+              this.loading_ = false;
               setTimeout(() => {
                 this.added = false
               }, 4000);
             }).catch( error => {
               this.msm_error = error.response.data.msg
               this.valid= false 
-              loading_ = false;
+              this.loading_ = false;
             })
       },
 

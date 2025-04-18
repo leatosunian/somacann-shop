@@ -123,8 +123,7 @@
                 background-color: transparent !important;
                 border-radius: 8px;
                 border: 1px solid rgb(214, 214, 214);
-                padding-top: 30px !important;
-                padding-bottom: 4px !important;
+                padding: 20px !important;
               "
             >
               <div class="card-body">
@@ -138,7 +137,7 @@
                     <h3 style="font-size: 20px">Aún no hiciste pedidos.</h3>
                     <span
                       style="color: black; font-weight: 400; font-size: 15px"
-                      >Qué esperas?
+                      >¿Qué esperás?
                     </span>
                     <router-link
                       to="/products"
@@ -149,7 +148,7 @@
                         font-size: 15px;
                         margin-left: 1px !important;
                       "
-                      >¡Hacé tu primer compra!</router-link
+                      >¡Hacé tu primera compra!</router-link
                     >
                   </div>
                 </div>

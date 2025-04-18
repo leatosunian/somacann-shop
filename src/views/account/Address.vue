@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="block">
-                  <div class="block-header">
+                  <div class="block-header"  style="background-color: transparent !important;">
                     <h6 class="mb-0 text-uppercase">Domicilios de entrega</h6>
                   </div>
 

@@ -221,17 +221,17 @@
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
-      <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="../assets/bannerSomaWeb.jpg"
-            alt="image slot"
-          />
-        </template>
-      </b-carousel-slide>
+        <b-carousel-slide>
+          <template #img>
+            <img
+              class="d-block img-fluid w-100"
+              width="1024"
+              height="480"
+              src="../assets/bannerSomaWeb.jpg"
+              alt="image slot"
+            />
+          </template>
+        </b-carousel-slide>
 
         <!-- Text slides with image -->
         <b-carousel-slide img-src="../assets/banner1test.webp">
@@ -479,8 +479,34 @@
     </section>
 
     <div class="sectionTitle">
-      <span></span>
+      <span>Vaporizadores</span>
+      <p class="text-gray-500">
+        Disfrutá de una experiencia única de vapeo con nuestra amplia variedad de productos.
+      </p>
     </div>
+
+    <div class="categoriesBanner">
+      <div class="categoriesBannerItem">
+        <img src="../assets/ENAILS.png" alt="" />
+        <span>E-Nails</span>
+      </div>
+
+      <div class="categoriesBannerItem">
+        <img src="../assets/PEN.png" alt="" />
+        <span>Pen</span>
+      </div>
+
+      <div class="categoriesBannerItem">
+        <img src="../assets/ESCRITORIO.png" alt="" />
+        <span>Escritorio</span>
+      </div>
+
+      <div class="categoriesBannerItem">
+        <img src="../assets/HERBALES.png" alt="" />
+        <span>Herbales</span>
+      </div>
+    </div>
+
     <div class="sectionTitle">
       <span>Productos mas vendidos</span>
       <p class="text-gray-500">
@@ -488,7 +514,7 @@
       </p>
     </div>
 
-    <section class="py-4" style="margin: 70px 0">
+    <section class="py-4" style="margin: 50px 0">
       <div class="container">
         <!-- <div class="row">
           <div class="mx-auto mb-5 text-center col-xl-8">
@@ -621,6 +647,8 @@
   width: 100%;
   padding-bottom: 8px;
   height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   gap: 5px;
   margin-top: 40px;
@@ -709,7 +737,7 @@
   }
   .sectionTitle {
     padding-bottom: 8px;
-    height: 70px;
+    height: fit-content;
     padding-bottom: 4px;
   }
   .sectionTitle span {
