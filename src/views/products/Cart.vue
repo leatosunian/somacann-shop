@@ -43,8 +43,8 @@
         </div>
       </div>
     </template>
-    <template v-if="!loading" >
-      <section style="margin-bottom: 170px;">
+    <template v-if="!loading">
+      <section style="margin-bottom: 170px">
         <div class="container">
           <div class="mb-5 row" v-if="cart.length >= 1">
             <div class="col-lg-8">
@@ -52,7 +52,10 @@
                 <div class="cart-wrapper">
                   <div
                     class="text-center cart-header"
-                    style="border-bottom: 1px solid #1c4c3b; background:transparent;"
+                    style="
+                      border-bottom: 1px solid #1c4c3b;
+                      background: transparent;
+                    "
                   >
                     <div class="row">
                       <div class="col-5">Producto</div>
@@ -84,9 +87,14 @@
                               <router-link
                                 :to="/product/ + item.product.slug"
                                 class="text-uppercase text-dark"
+                                style="letter-spacing:.5px;"
                                 ><strong>{{ item.product.name }}</strong>
                               </router-link>
                               <br />
+                              <span style="margin-top:3px; font-weight:500; font-size: 13px;"
+                                >{{ item.product.str_variant }}:
+                                {{ item.variant.variant }}
+                              </span>
                               <!-- <span class="text-sm text-muted">{{item.product.str_variant}}: {{item.variant.variant}}</span> -->
                             </div>
                           </div>
@@ -166,10 +174,10 @@
             </div>
             <div class="col-lg-4">
               <div class="block mb-5">
-                <div class="block-header" style="background-color: transparent;">
+                <div class="block-header" style="background-color: transparent">
                   <h6 class="mb-0 text-uppercase">Resumen del pedido</h6>
                 </div>
-                <div class="pt-1 block-body ">
+                <div class="pt-1 block-body">
                   <ul class="mb-0 order-summary list-unstyled">
                     <li class="border-0 order-summary-item">
                       <span>Subtotal sin envío</span>
@@ -294,6 +302,7 @@ export default {
           this.total = 0;
           const { data } = response;
           this.cart = data;
+          console.log(data);
           this.loading = false;
           loader.hide();
           for (const item of data) {

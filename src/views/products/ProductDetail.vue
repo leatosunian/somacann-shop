@@ -273,7 +273,7 @@
                   >{{ product[0].subcategory }}</router-link
                 >
               </li>
-              <li class="breadcrumb-item active" >{{ product[0].name }}</li>
+              <li class="breadcrumb-item active">{{ product[0].name }}</li>
             </ul>
             <h1 class="mb-4 productName">{{ product[0].name }}</h1>
             <div
@@ -284,13 +284,13 @@
                   class="mb-0 list-inline-item h3 fw-normal"
                   v-if="USDEnabled == false"
                 >
-                 AR{{  priceConverter(product[0].price * USDData.value) }}
+                  AR{{ priceConverter(product[0].price * USDData.value) }}
                 </li>
                 <li
                   class="mb-0 list-inline-item h3 fw-normal"
                   v-if="USDEnabled == true"
                 >
-                 AR{{  priceConverter(product[0].price) }}
+                  AR{{ priceConverter(product[0].price) }}
                 </li>
                 <li class="list-inline-item text-muted fw-light">
                   <del v-if="product[0].discount">{{
@@ -301,43 +301,40 @@
             </div>
             <p class="mb-4 text-muted">{{ product[0].description }}</p>
 
-            <div class="row">
-              <!-- <div class="mb-3 col-sm-6 col-lg-12 detail-option">
-                  <h6 class="detail-option-heading"> {{ product[0].str_variant }}</h6>
-                  <div style="display:flex; flex-direction:row; gap:10px;">
-                    <template v-for="variant in variants" >
-                      <div v-if="variant.stock > 0 " style="width: fit-content;
-                        padding: 0 10px;" class="hoverClass" v-on:click="getVariant(variant._id)" :id="'variant_'+variant._id">
-                        <input  class="input-invisible" type="radio" :value="variant._id" name="size" value="value_0" id="size_0" required>
-                        <span  v-on:click="getVariant(variant._id)" :for="'variant_'+variant._id" style="user-select:none;"  >{{variant.variant}}
-                        </span>
-                      </div>
-                    </template>
-                  </div>
-
+            <div class="row" v-if="variants.length > 0">
+              <div class="mb-3 col-sm-6 col-lg-12 detail-option">
+                <h6 class="detail-option-heading">
+                  {{ product[0].str_variant }}
+                </h6>
+                <div style="display: flex; flex-direction: row; gap: 10px">
+                  <template v-for="variant in variants">
+                    <div
+                      v-if="variant.stock > 0"
+                      style="width: fit-content; padding: 0 10px"
+                      class="hoverClass"
+                      v-on:click="getVariant(variant._id)"
+                      :id="'variant_' + variant._id"
+                    >
+                      <input
+                        class="input-invisible"
+                        type="radio"
+                        :value="variant._id"
+                        name="size"
+                        value="value_0"
+                        id="size_0"
+                        required
+                      />
+                      <span
+                        v-on:click="getVariant(variant._id)"
+                        :for="'variant_' + variant._id"
+                        style="user-select: none"
+                        >{{ variant.variant }}
+                      </span>
+                    </div>
+                  </template>
                 </div>
-                
-                <div class="mb-3 col-12 detail-option">
-                  <h6 class="detail-option-heading">Colour <span>(required)</span></h6>
-                  <ul class="mb-0 list-inline colours-wrapper">
-                    <li class="list-inline-item">
-                      <label class="btn-colour" for="colour_Blue" style="background-color: #668cb9"> </label>
-                      <input class="input-invisible" type="radio" name="colour" value="value_Blue" id="colour_Blue" required>
-                    </li>
-                    <li class="list-inline-item">
-                      <label class="btn-colour" for="colour_White" style="background-color: #fff"> </label>
-                      <input class="input-invisible" type="radio" name="colour" value="value_White" id="colour_White" required>
-                    </li>
-                    <li class="list-inline-item">
-                      <label class="btn-colour" for="colour_Violet" style="background-color: #8b6ea4"> </label>
-                      <input class="input-invisible" type="radio" name="colour" value="value_Violet" id="colour_Violet" required>
-                    </li>
-                    <li class="list-inline-item">
-                      <label class="btn-colour" for="colour_Red" style="background-color: #dd6265"> </label>
-                      <input class="input-invisible" type="radio" name="colour" value="value_Red" id="colour_Red" required>
-                    </li>
-                  </ul>
-                </div> -->
+              </div>
+
               <div class="mb-4 col-12 col-lg-6 detail-option">
                 <label class="detail-option-heading fw-bold">Cantidad</label>
                 <input
@@ -399,7 +396,7 @@
                   class="mb-1 btn btn-dark btn-md btnAdd"
                   type="button"
                   v-on:click="addToCart()"
-                  style="font-size: 12px; letter-spacing: 1px; font-weight: 800;"
+                  style="font-size: 12px; letter-spacing: 1px; font-weight: 800"
                 >
                   AGREGAR AL CARRITO
                 </button>
@@ -481,7 +478,12 @@
     <section class="my-5">
       <div class="container">
         <header class="text-center">
-          <h6 class="mb-5 text-uppercase" style="color:#1c4c3b; letter-spacing:1px; font-size:20px;">Tal vez te guste</h6>
+          <h6
+            class="mb-5 text-uppercase"
+            style="color: #1c4c3b; letter-spacing: 1px; font-size: 20px"
+          >
+            Tal vez te guste
+          </h6>
         </header>
         <div class="row">
           <!-- product-->
@@ -541,21 +543,21 @@
 
 <style>
 .bgVariant {
-  color: #1C4C3B;
-  border: 1px solid #1C4C3B;
+  color: white;
+  background-color: #1c4c3b;
+  border: 1px solid #1c4c3b;
 }
 
 .productName {
   font-size: 44px;
 }
 
-
 .owl-carousel .owl-stage-outer {
   max-height: 70vh !important;
 }
 
 .owl-theme.owl-dots-modern .owl-dots .owl-dot.active span {
-  background-color: #1C4C3B !important;
+  background-color: #1c4c3b !important;
 }
 
 @media (max-width: 991px) {
@@ -577,7 +579,7 @@ export default {
     return {
       product: [],
       gallery: [],
-      /*variants: [],*/
+      variants: [],
       relatedProducts: [],
       cartObj: {
         amountOfProducts: 1,
@@ -625,7 +627,8 @@ export default {
           const { data } = response;
           this.product = data.product;
           this.gallery = data.gallery;
-          /*this.variants = data.variants*/
+          this.variants = data.variants;
+                    
           loader.hide();
           initCarousel.initGallery();
           initCarousel.initGlight();
@@ -660,13 +663,13 @@ export default {
           this.msm_error = error.response.data.msg;
         });
     },
-    /*getVariant(id){
-        this.cartObj.variant = id
-        setTimeout(() => {
-          $('.hoverClass').removeClass('bgVariant')
-          $('#variant_'+id).addClass('bgVariant')
-        }, 40);
-      },*/
+    getVariant(id) {
+      this.cartObj.variant = id;
+      setTimeout(() => {
+        $(".hoverClass").removeClass("bgVariant");
+        $("#variant_" + id).addClass("bgVariant");
+      }, 40);
+    },
     addToCart() {
       this.addedToCart = true;
       const loggedIn = localStorage.getItem("token_shopuser");
@@ -676,11 +679,12 @@ export default {
         this.msm_error = "Iniciá sesión para comprar";
         return;
       }
-      /* if(!this.cartObj.variant){
-          this.valid = false
-          this.addedToCart = false
-          return this.msm_error = 'Selecciona un talle'
-        } */
+      if (!this.cartObj.variant) {
+        this.valid = false;
+        this.addedToCart = false;
+        return (this.msm_error = "Selecciona un color");
+      }
+      console.log('this.cartObj', this.cartObj)
       const token = localStorage.getItem("token_shopuser");
       axios
         .post(this.$url + "/cart/create", this.cartObj, {
