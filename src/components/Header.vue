@@ -469,7 +469,7 @@
               letter-spacing: 0px;
             "
           >
-            <span style="text-decoration: none">
+            <span style="text-decoration: none" class="emoji">
               {{ headerMessage }}
             </span>
           </span>
@@ -481,6 +481,9 @@
 </template>
 
 <style>
+.emoji {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
 .viewCartBtn {
   text-transform: uppercase;
   letter-spacing: 0.07em;
