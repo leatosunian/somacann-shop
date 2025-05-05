@@ -31,7 +31,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[0].image"
+                      :src="gallery[0].image"
                     />
                   </button>
                   <button
@@ -40,7 +40,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[1].image"
+                      :src="gallery[1].image"
                     />
                   </button>
                   <button
@@ -49,7 +49,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[2].image"
+                      :src="gallery[2].image"
                     />
                   </button>
                   <button
@@ -58,7 +58,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[3].image"
+                      :src="gallery[3].image"
                     />
                   </button>
                   <button
@@ -67,7 +67,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[4].image"
+                      :src="gallery[4].image"
                     />
                   </button>
                   <button
@@ -76,7 +76,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[5].image"
+                      :src="gallery[5].image"
                     />
                   </button>
                   <button
@@ -85,7 +85,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[6].image"
+                      :src="gallery[6].image"
                     />
                   </button>
                   <button
@@ -94,7 +94,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[7].image"
+                      :src="gallery[7].image"
                     />
                   </button>
                   <button
@@ -103,7 +103,7 @@
                   >
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getGallery/' + gallery[8].image"
+                      :src="gallery[8].image"
                     />
                   </button>
                 </div>
@@ -120,13 +120,13 @@
                   <div class="item" v-if="gallery[0]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[0].image"
-                      :href="$url + '/getGallery/' + gallery[0].image"
+                      :src="gallery[0].image"
+                      :href="gallery[0].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[0].image"
+                        :src="gallery[0].image"
                         alt="..."
                       />
                     </a>
@@ -134,13 +134,13 @@
                   <div class="item" v-if="gallery[1]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[1].image"
-                      :href="$url + '/getGallery/' + gallery[1].image"
+                      :src="gallery[1].image"
+                      :href="gallery[1].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[1].image"
+                        :src="gallery[1].image"
                         alt="..."
                       />
                     </a>
@@ -148,13 +148,13 @@
                   <div class="item" v-if="gallery[2]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[2].image"
-                      :href="$url + '/getGallery/' + gallery[2].image"
+                      :src="gallery[2].image"
+                      :href="gallery[2].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[2].image"
+                        :src="gallery[2].image"
                         alt="..."
                       />
                     </a>
@@ -162,13 +162,13 @@
                   <div class="item" v-if="gallery[3]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[3].image"
-                      :href="$url + '/getGallery/' + gallery[3].image"
+                      :src="gallery[3].image"
+                      :href="gallery[3].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[3].image"
+                        :src="gallery[3].image"
                         alt="..."
                       />
                     </a>
@@ -176,13 +176,13 @@
                   <div class="item" v-if="gallery[4]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[4].image"
-                      :href="$url + '/getGallery/' + gallery[4].image"
+                      :src="gallery[4].image"
+                      :href="gallery[4].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[4].image"
+                        :src="gallery[4].image"
                         alt="..."
                       />
                     </a>
@@ -190,13 +190,13 @@
                   <div class="item" v-if="gallery[5]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[5].image"
-                      :href="$url + '/getGallery/' + gallery[5].image"
+                      :src="gallery[5].image"
+                      :href="gallery[5].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[5].image"
+                        :src="gallery[5].image"
                         alt="..."
                       />
                     </a>
@@ -204,13 +204,13 @@
                   <div class="item" v-if="gallery[6]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[6].image"
-                      :href="$url + '/getGallery/' + gallery[6].image"
+                      :src="gallery[6].image"
+                      :href="gallery[6].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[6].image"
+                        :src="gallery[6].image"
                         alt="..."
                       />
                     </a>
@@ -218,13 +218,13 @@
                   <div class="item" v-if="gallery[7]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[7].image"
-                      :href="$url + '/getGallery/' + gallery[7].image"
+                      :src="gallery[7].image"
+                      :href="gallery[7].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[7].image"
+                        :src="gallery[7].image"
                         alt="..."
                       />
                     </a>
@@ -232,13 +232,13 @@
                   <div class="item" v-if="gallery[8]">
                     <a
                       class="glightbox"
-                      :src="$url + '/getGallery/' + gallery[8].image"
-                      :href="$url + '/getGallery/' + gallery[8].image"
+                      :src="gallery[8].image"
+                      :href="gallery[8].image"
                       data-gallery="product-gallery"
                     >
                       <img
                         class="img-fluid"
-                        :src="$url + '/getGallery/' + gallery[8].image"
+                        :src="gallery[8].image"
                         alt="..."
                       />
                     </a>
@@ -499,7 +499,7 @@
                   </div>
                   <img
                     class="img-fluid"
-                    :src="$url + '/getImage/' + product.image"
+                    :src="product.image"
                     alt="product"
                   />
                   <div class="product-hover-overlay" style="border-radius: 4px">
@@ -521,7 +521,7 @@
                   </div>
                 </div>
                 <div class="py-2">
-                  <p class="mb-1 text-sm text-muted">{{ product.category }}</p>
+                  <p class="mb-1 text-sm text-muted">{{ product.subcategory }}</p>
                   <h3 class="mb-1 h6 text-uppercase">
                     <a class="text-dark" style="cursor: pointer">{{
                       product.name

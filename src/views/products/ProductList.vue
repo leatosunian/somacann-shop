@@ -128,7 +128,7 @@
                       </div>
                       <img
                         class="img-fluid productBorderRadius"
-                        :src="$url + '/getImage/' + item.image"
+                        :src="item.image"
                         alt="product"
                       />
                       <div

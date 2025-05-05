@@ -78,7 +78,7 @@
                             <router-link :to="/product/ + item.product.slug">
                               <img
                                 class="cart-item-img"
-                                :src="$url + '/getImage/' + item.product.image"
+                                :src="item.product.image"
                                 alt="..."
                               />
                             </router-link>

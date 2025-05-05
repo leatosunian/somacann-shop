@@ -433,7 +433,7 @@
                     </div>
                     <img
                       class="img-fluid productBorderRadius"
-                      :src="$url + '/getImage/' + item.image"
+                      :src="item.image"
                       alt="product"
                     />
                     <div
@@ -594,7 +594,7 @@
                   </div>
                   <img
                     class="img-fluid productBorderRadius"
-                    :src="$url + '/getImage/' + item.image"
+                    :src="item.image"
                     alt="product"
                   />
                   <div class="product-hover-overlay" style="border-radius: 4px">
