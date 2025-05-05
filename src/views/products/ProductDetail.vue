@@ -27,6 +27,15 @@
                 <div class="owl-thumbs" data-slider-id="1">
                   <button
                     class="mb-3 owl-thumb-item detail-thumb-item"
+                    v-if="product[0]"
+                  >
+                    <img
+                      class="img-fluid productBorderRadius"
+                      :src="product[0].image"
+                    />
+                  </button>
+                  <button
+                    class="mb-3 owl-thumb-item detail-thumb-item"
                     v-if="gallery[0]"
                   >
                     <img
@@ -117,6 +126,20 @@
                   class="owl-carousel detail-slider owl-theme owl-dots-modern"
                   data-slider-id="1"
                 >
+                  <div class="item" v-if="product[0].image">
+                    <a
+                      class="glightbox"
+                      :src="product[0].image"
+                      :href="product[0].image"
+                      data-gallery="product-gallery"
+                    >
+                      <img
+                        class="img-fluid"
+                        :src="product[0].image"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
                   <div class="item" v-if="gallery[0]">
                     <a
                       class="glightbox"
@@ -497,11 +520,7 @@
                   <div class="ribbon ribbon-info" v-if="product.discount">
                     En oferta
                   </div>
-                  <img
-                    class="img-fluid"
-                    :src="product.image"
-                    alt="product"
-                  />
+                  <img class="img-fluid" :src="product.image" alt="product" />
                   <div class="product-hover-overlay" style="border-radius: 4px">
                     <div
                       class="product-hover-overlay-buttons"
@@ -521,7 +540,9 @@
                   </div>
                 </div>
                 <div class="py-2">
-                  <p class="mb-1 text-sm text-muted">{{ product.subcategory }}</p>
+                  <p class="mb-1 text-sm text-muted">
+                    {{ product.subcategory }}
+                  </p>
                   <h3 class="mb-1 h6 text-uppercase">
                     <a class="text-dark" style="cursor: pointer">{{
                       product.name
@@ -628,7 +649,7 @@ export default {
           this.product = data.product;
           this.gallery = data.gallery;
           this.variants = data.variants;
-                    
+
           loader.hide();
           initCarousel.initGallery();
           initCarousel.initGlight();
@@ -684,7 +705,7 @@ export default {
         this.addedToCart = false;
         return (this.msm_error = "Selecciona un color");
       }
-      console.log('this.cartObj', this.cartObj)
+      console.log("this.cartObj", this.cartObj);
       const token = localStorage.getItem("token_shopuser");
       axios
         .post(this.$url + "/cart/create", this.cartObj, {
