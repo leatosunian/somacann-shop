@@ -877,6 +877,7 @@ export default {
         .then((response) => {
           const { data } = response;
           /* window.location.href = data.sandbox_init_point+'?ShipM='+this.shipMethodSelected*/
+          console.log('mpresponse',data)
           this.validSale = false;
           this.$socket.emit("sendCart", true);
           window.location.href = data.init_point;
