@@ -915,7 +915,7 @@ export default {
           console.log("mpresponse", data);
           this.validSale = false;
           this.$socket.emit("sendCart", true);
-          window.location.href = data.init_point;
+          window.location.href = data.sandbox_init_point;
         })
         .catch((error) => {
           console.log(error.response.data.msg);
