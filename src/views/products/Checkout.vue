@@ -897,7 +897,7 @@ export default {
         },
         items: this.items,
         notification_url:
-          "https://somacann-server-production.up.railway.app/api/sales/webhook",
+          "https://somacann-server-production.up.railway.app/api/sales/webhook?source_news=webhooks",
         metadata: { clientID: user, saleID: this.saleID },
         auto_return: "approved",
       };
@@ -911,11 +911,12 @@ export default {
         })
         .then((response) => {
           const { data } = response;
-          /* window.location.href = data.sandbox_init_point+'?ShipM='+this.shipMethodSelected*/
+          console.log(data.init_point);
+          //window.location.href = data.sandbox_init_point+'?ShipM='+this.shipMethodSelected
           console.log("mpresponse", data);
           this.validSale = false;
           this.$socket.emit("sendCart", true);
-          window.location.href = data.sandbox_init_point;
+          window.location.href = data.init_point;
         })
         .catch((error) => {
           console.log(error.response.data.msg);
