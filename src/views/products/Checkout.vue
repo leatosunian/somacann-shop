@@ -74,7 +74,10 @@
                 <div class="cart-wrapper">
                   <div
                     class="text-center cart-header"
-                    style="border-bottom: 1px solid #1c4c3b; background-color: transparent;"
+                    style="
+                      border-bottom: 1px solid #1c4c3b;
+                      background-color: transparent;
+                    "
                   >
                     <div class="row">
                       <div class="col-5">Producto</div>
@@ -176,7 +179,17 @@
               <div
                 class="my-2 d-flex justify-content-between flex-column flex-lg-row"
               >
-                <router-link to="/products" class="" style="color:#1c4c3b; letter-spacing: .4px; text-decoration: none; font-size: 12px; font-weight: 600; margin-top:15px;"
+                <router-link
+                  to="/products"
+                  class=""
+                  style="
+                    color: #1c4c3b;
+                    letter-spacing: 0.4px;
+                    text-decoration: none;
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin-top: 15px;
+                  "
                   >CONTINUAR COMPRANDO</router-link
                 >
               </div>
@@ -185,10 +198,14 @@
 
           <div class="col-lg-8">
             <div
-              class="block mb-3" style="background-color: transparent !important;"
+              class="block mb-3"
+              style="background-color: transparent !important"
               v-if="addresses.length >= 1 && shipMethodSelected == 'toAddress'"
             >
-              <div class="block-header" style="background-color: transparent !important;">
+              <div
+                class="block-header"
+                style="background-color: transparent !important"
+              >
                 <h6 class="mb-0 text-uppercase">Domicilio de entrega</h6>
               </div>
 
@@ -280,7 +297,10 @@
             >
 
             <div class="block mt-5">
-              <div class="block-header"  style="background-color: transparent !important;">
+              <div
+                class="block-header"
+                style="background-color: transparent !important"
+              >
                 <h6 class="mb-2 text-uppercase">Métodos de envío</h6>
                 <button
                   v-b-modal.modal-lg
@@ -698,6 +718,7 @@ export default {
           this.cart = data;
           this.loading = false;
           loader.hide();
+          console.log(data);
 
           for (const item of data) {
             const subtotal = item.product.price * item.amountOfProducts;
@@ -723,14 +744,24 @@ export default {
               });
             }
 
-            this.saleDetail.push({
-              subtotal: subtotal,
-              unitPrice: item.product.price,
-              items: item.amountOfProducts,
-              client: user,
-              product: item.product._id,
-              /*variant: item.variant._id*/
-            });
+            if (item.variant) {
+              this.saleDetail.push({
+                subtotal: subtotal,
+                unitPrice: item.product.price,
+                items: item.amountOfProducts,
+                client: user,
+                product: item.product._id,
+                variant: item.variant._id,
+              });
+            } else {
+              this.saleDetail.push({
+                subtotal: subtotal,
+                unitPrice: item.product.price,
+                items: item.amountOfProducts,
+                client: user,
+                product: item.product._id,
+              });
+            }
           }
 
           if (this.USDEnabled == false) {
@@ -864,6 +895,8 @@ export default {
           failure: `${this.$frontendURL}/verify/failure`,
         },
         items: this.items,
+        notification_url:
+          "https://somacann-server-production.up.railway.app/api/sales/webhook",
         metadata: { clientID: user, saleID: this.saleID },
         auto_return: "approved",
       };
@@ -877,7 +910,7 @@ export default {
         .then((response) => {
           const { data } = response;
           /* window.location.href = data.sandbox_init_point+'?ShipM='+this.shipMethodSelected*/
-          console.log('mpresponse',data)
+          console.log("mpresponse", data);
           this.validSale = false;
           this.$socket.emit("sendCart", true);
           window.location.href = data.init_point;
@@ -893,7 +926,7 @@ export default {
         id = this.cart[0].product.seller;
       }
       console.log(id);
-      
+
       const token = localStorage.getItem("token_shopuser");
       axios
         .get(this.$url + "/shipping/methods/" + id, {
@@ -905,7 +938,7 @@ export default {
         .then((response) => {
           const { data } = response;
           console.log("SHIPPING METHODS RESPONSE", data);
-          
+
           this.shipMethods = data;
           if (this.total < this.shipMethods.freeShippingAmount) {
             return (this.freeShipping = false);

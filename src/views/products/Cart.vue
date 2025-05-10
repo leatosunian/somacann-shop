@@ -87,11 +87,17 @@
                               <router-link
                                 :to="/product/ + item.product.slug"
                                 class="text-uppercase text-dark"
-                                style="letter-spacing:.5px;"
+                                style="letter-spacing: 0.5px"
                                 ><strong>{{ item.product.name }}</strong>
                               </router-link>
                               <br />
-                              <span style="margin-top:3px; font-weight:500; font-size: 13px;"
+                              <span
+                                style="
+                                  margin-top: 3px;
+                                  font-weight: 500;
+                                  font-size: 13px;
+                                "
+                                v-if="item.variant"
                                 >{{ item.product.str_variant }}:
                                 {{ item.variant.variant }}
                               </span>

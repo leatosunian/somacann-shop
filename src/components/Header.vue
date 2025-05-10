@@ -346,7 +346,7 @@
                           <a href="detail.html">
                             <img
                               class="img-fluid navbar-cart-product-image"
-                              :src="$url + '/getImage/' + item.product.image"
+                              :src="item.product.image"
                               alt="..."
                           /></a>
                           <div class="w-100">

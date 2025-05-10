@@ -324,8 +324,8 @@
             </div>
             <p class="mb-4 text-muted">{{ product[0].description }}</p>
 
-            <div class="row" v-if="variants.length > 0">
-              <div class="mb-3 col-sm-6 col-lg-12 detail-option">
+            <div class="row" >
+              <div v-if="product[0].hasVariant" class="mb-3 col-sm-6 col-lg-12 detail-option">
                 <h6 class="detail-option-heading">
                   {{ product[0].str_variant }}
                 </h6>
@@ -647,6 +647,7 @@ export default {
         .then((response) => {
           const { data } = response;
           this.product = data.product;
+          console.log('data.product', data.product)
           this.gallery = data.gallery;
           this.variants = data.variants;
 
@@ -700,10 +701,12 @@ export default {
         this.msm_error = "Iniciá sesión para comprar";
         return;
       }
-      if (!this.cartObj.variant) {
+      console.log('hasVariant',this.product.hasVariant);
+      
+      if (this.product[0].hasVariant && !this.cartObj.variant) {
         this.valid = false;
         this.addedToCart = false;
-        return (this.msm_error = "Selecciona un color");
+        return (this.msm_error = "Selecciona una variante de producto");
       }
       console.log("this.cartObj", this.cartObj);
       const token = localStorage.getItem("token_shopuser");
