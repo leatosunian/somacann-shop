@@ -744,7 +744,7 @@ export default {
               });
             }
 
-            if (item.variant) {
+            if (item.variant._id) {
               this.saleDetail.push({
                 subtotal: subtotal,
                 unitPrice: item.product.price,
@@ -858,6 +858,7 @@ export default {
           this.$socket.emit("sendCart", true);
           this.validSale = true;
           this.saleID = data._id;
+          console.log('createSale response: ', data)
           this.mercadoPagoPref();
           /*setTimeout(() => {
                     this.$router.push({name: 'order', params: {id:data._id}})
@@ -872,7 +873,7 @@ export default {
       if (this.shippingCost > 0) {
         this.items.push({
           title: "Envío",
-          description: "Costos de envío",
+          description: "Costos de envío", 
           quantity: 1,
           currency_id: "ARS",
           unit_price: this.shippingCost,
@@ -900,6 +901,7 @@ export default {
         metadata: { clientID: user, saleID: this.saleID },
         auto_return: "approved",
       };
+      console.log('data body for preference: ', data);
       axios
         .post("https://api.mercadopago.com/checkout/preferences", data, {
           headers: {
