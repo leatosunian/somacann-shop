@@ -858,7 +858,7 @@ export default {
           this.$socket.emit("sendCart", true);
           this.validSale = true;
           this.saleID = data._id;
-          console.log('createSale response: ', data)
+          console.log("createSale response: ", data);
           this.mercadoPagoPref();
           /*setTimeout(() => {
                     this.$router.push({name: 'order', params: {id:data._id}})
@@ -873,7 +873,7 @@ export default {
       if (this.shippingCost > 0) {
         this.items.push({
           title: "Envío",
-          description: "Costos de envío", 
+          description: "Costos de envío",
           quantity: 1,
           currency_id: "ARS",
           unit_price: this.shippingCost,
@@ -901,7 +901,7 @@ export default {
         metadata: { clientID: user, saleID: this.saleID },
         auto_return: "approved",
       };
-      console.log('data body for preference: ', data);
+      console.log("data body for preference: ", data);
       axios
         .post("https://api.mercadopago.com/checkout/preferences", data, {
           headers: {
@@ -911,12 +911,15 @@ export default {
         })
         .then((response) => {
           const { data } = response;
-          console.log(data.init_point);
+
           //window.location.href = data.sandbox_init_point+'?ShipM='+this.shipMethodSelected
           console.log("mpresponse", data);
           this.validSale = false;
           this.$socket.emit("sendCart", true);
-          window.location.href = data.init_point;
+          console.log(data.init_point);
+          setTimeout(() => {
+            window.location.href = data.init_point;
+          }, 4000);
         })
         .catch((error) => {
           console.log(error.response.data.msg);
