@@ -902,6 +902,7 @@ export default {
         auto_return: "approved",
       };
       console.log("data body for preference: ", data);
+      console.log("mp keyauth:", this.$MPKeyAuth);
       axios
         .post("https://api.mercadopago.com/checkout/preferences", data, {
           headers: {
@@ -916,10 +917,11 @@ export default {
           console.log("mpresponse", data);
           this.validSale = false;
           this.$socket.emit("sendCart", true);
+          window.location.href = data.init_point;
           console.log(data.init_point);
-          setTimeout(() => {
-            window.location.href = data.init_point;
-          }, 4000);
+          //setTimeout(() => {
+          //  window.location.href = data.init_point;
+          //}, 4000);
         })
         .catch((error) => {
           console.log(error.response.data.msg);
