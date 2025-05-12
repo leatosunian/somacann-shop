@@ -108,6 +108,16 @@
                                 ><strong>{{ item.product.name }}</strong>
                               </router-link>
                               <br />
+                              <span
+                                style="
+                                  margin-top: 3px;
+                                  font-weight: 500;
+                                  font-size: 13px;
+                                "
+                                v-if="item.variant"
+                                >{{ item.product.str_variant }}:
+                                {{ item.variant.variant }}
+                              </span>
                               <!-- <span class="text-sm text-muted">{{item.product.str_variant}}: {{item.variant.variant}}</span> -->
                             </div>
                           </div>
@@ -721,6 +731,7 @@ export default {
           console.log(data);
 
           for (const item of data) {
+            console.log(item);
             const subtotal = item.product.price * item.amountOfProducts;
             this.total = this.total + subtotal;
             if (this.USDEnabled == false) {
@@ -744,7 +755,7 @@ export default {
               });
             }
 
-            if (item.variant._id) {
+            if (item.variant) {
               this.saleDetail.push({
                 subtotal: subtotal,
                 unitPrice: item.product.price,
@@ -753,7 +764,8 @@ export default {
                 product: item.product._id,
                 variant: item.variant._id,
               });
-            } else {
+            }
+            if (!item.variant) {
               this.saleDetail.push({
                 subtotal: subtotal,
                 unitPrice: item.product.price,
