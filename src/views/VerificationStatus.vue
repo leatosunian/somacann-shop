@@ -87,8 +87,6 @@ export default {
     window.scrollTo(0, 0);
   },
   beforeMount() {
-    console.log(this.$route.query.payment_id);
-
     this.payment_id = this.$route.query.payment_id;
     this.sale.transaction = this.payment_id;
 
@@ -136,7 +134,6 @@ export default {
         })
         .then((response) => {
           const { data } = response;
-          console.log(data);
           setTimeout(() => {
             this.$router.push({ name: "order", params: { id: data[0]._id } });
           }, 3000);

@@ -808,7 +808,6 @@ export default {
           const { data } = response;
           this.fourProducts = data;
           loader.hide();
-          console.log(this.fourProducts);
         })
         .catch((error) => {
           this.msm_error = error.response.data.msg;
@@ -825,7 +824,6 @@ export default {
         .then((response) => {
           const { data } = response;
           this.mostWantedProducts = data;
-          console.log(this.mostWantedProducts);
         })
         .catch((error) => {
           console.log(error.response.data.msg);

@@ -647,7 +647,6 @@ export default {
         .then((response) => {
           const { data } = response;
           this.product = data.product;
-          console.log('data.product', data.product)
           this.gallery = data.gallery;
           this.variants = data.variants;
 
@@ -701,14 +700,12 @@ export default {
         this.msm_error = "Iniciá sesión para comprar";
         return;
       }
-      console.log('hasVariant',this.product.hasVariant);
       
       if (this.product[0].hasVariant && !this.cartObj.variant) {
         this.valid = false;
         this.addedToCart = false;
         return (this.msm_error = "Selecciona una variante de producto");
       }
-      console.log("this.cartObj", this.cartObj);
       const token = localStorage.getItem("token_shopuser");
       axios
         .post(this.$url + "/cart/create", this.cartObj, {

@@ -678,7 +678,6 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
-    console.log(this.shipMethodSelected);
   },
   methods: {
     selectShipMethod(price) {
@@ -728,10 +727,8 @@ export default {
           this.cart = data;
           this.loading = false;
           loader.hide();
-          console.log(data);
 
           for (const item of data) {
-            console.log(item);
             const subtotal = item.product.price * item.amountOfProducts;
             this.total = this.total + subtotal;
             if (this.USDEnabled == false) {
@@ -870,7 +867,6 @@ export default {
           this.$socket.emit("sendCart", true);
           this.validSale = true;
           this.saleID = data._id;
-          console.log("createSale response: ", data);
           this.mercadoPagoPref();
           /*setTimeout(() => {
                     this.$router.push({name: 'order', params: {id:data._id}})
@@ -913,8 +909,6 @@ export default {
         metadata: { clientID: user, saleID: this.saleID },
         auto_return: "approved",
       };
-      console.log("data body for preference: ", data);
-      console.log("mp keyauth:", this.$MPKeyAuth);
       axios
         .post("https://api.mercadopago.com/checkout/preferences", data, {
           headers: {
@@ -926,11 +920,9 @@ export default {
           const { data } = response;
 
           //window.location.href = data.sandbox_init_point+'?ShipM='+this.shipMethodSelected
-          console.log("mpresponse", data);
           this.validSale = false;
           this.$socket.emit("sendCart", true);
           window.location.href = data.init_point;
-          console.log(data.init_point);
           //setTimeout(() => {
           //  window.location.href = data.init_point;
           //}, 4000);
@@ -945,7 +937,6 @@ export default {
       if (this.cart[0]) {
         id = this.cart[0].product.seller;
       }
-      console.log(id);
 
       const token = localStorage.getItem("token_shopuser");
       axios
@@ -957,7 +948,6 @@ export default {
         })
         .then((response) => {
           const { data } = response;
-          console.log("SHIPPING METHODS RESPONSE", data);
 
           this.shipMethods = data;
           if (this.total < this.shipMethods.freeShippingAmount) {

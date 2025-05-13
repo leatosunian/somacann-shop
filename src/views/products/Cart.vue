@@ -308,7 +308,6 @@ export default {
           this.total = 0;
           const { data } = response;
           this.cart = data;
-          console.log(data);
           this.loading = false;
           loader.hide();
           for (const item of data) {
