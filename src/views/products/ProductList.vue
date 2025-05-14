@@ -170,10 +170,10 @@
                           >{{ item.name }}
                         </a>
                       </h3>
-                      <span class="text-muted" v-if="USDEnabled == false">{{
+                      <span class="text-muted" v-if="USDEnabled == false">AR{{
                         priceConverter(item.price * USDData.value)
                       }}</span>
-                      <span class="text-muted" v-if="USDEnabled == true">{{
+                      <span class="text-muted" v-if="USDEnabled == true">AR{{
                         priceConverter(item.price)
                       }}</span>
                     </div>

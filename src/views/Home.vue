@@ -464,8 +464,11 @@
                         item.name
                       }}</a>
                     </h3>
-                    <span class="text-muted"
-                      >{{ priceConverter(item.price) }}
+                    <span v-if="USDEnabled == true" class="text-muted"
+                      >AR{{ priceConverter(item.price) }}
+                    </span>
+                    <span v-if="USDEnabled == false" class="text-muted"
+                      >AR{{ priceConverter(item.price * USDData.value) }}
                     </span>
                   </div>
                 </div>
@@ -620,8 +623,11 @@
                   <h3 class="mb-1 h6" style="text-transform: uppercase">
                     <a class="text-dark" href="detail.html">{{ item.name }}</a>
                   </h3>
-                  <span class="text-muted"
-                    >{{ priceConverter(item.price) }}
+                  <span v-if="USDEnabled == true" class="text-muted"
+                    >AR{{ priceConverter(item.price) }}
+                  </span>
+                  <span v-if="USDEnabled == false" class="text-muted"
+                    >AR{{ priceConverter(item.price * USDData.value) }}
                   </span>
                 </div>
               </div>
@@ -779,6 +785,8 @@ export default {
       freeShipping: "",
       slide: 0,
       sliding: null,
+      USDData: {},
+      USDEnabled: null,
     };
   },
   mounted() {
@@ -833,10 +841,32 @@ export default {
     priceConverter(price) {
       return currencyFormatter.format(price, { code: "ARS" });
     },
+    getUSDSettings() {
+      axios
+        .get(`${this.$url}/public/getusdsettings`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        .then((response) => {
+          this.USDData = response.data[0];
+          console.log("usdsettings", response.data[0]);
+          if (this.USDData.enabled === true) {
+            this.USDEnabled = true;
+          }
+          if (this.USDData.enabled === false) {
+            this.USDEnabled = false;
+          }
+        })
+        .catch((error) => {
+          console.log(error.response.data.msg);
+        });
+    },
   },
   beforeMount() {
     this.getFourProducts();
     this.getMostWantedProducts();
+    this.getUSDSettings();
     initCarousel.init();
   },
 };

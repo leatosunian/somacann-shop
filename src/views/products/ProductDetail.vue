@@ -324,8 +324,11 @@
             </div>
             <p class="mb-4 text-muted">{{ product[0].description }}</p>
 
-            <div class="row" >
-              <div v-if="product[0].hasVariant" class="mb-3 col-sm-6 col-lg-12 detail-option">
+            <div class="row">
+              <div
+                v-if="product[0].hasVariant"
+                class="mb-3 col-sm-6 col-lg-12 detail-option"
+              >
                 <h6 class="detail-option-heading">
                   {{ product[0].str_variant }}
                 </h6>
@@ -548,9 +551,12 @@
                       product.name
                     }}</a>
                   </h3>
-                  <span class="text-muted">{{
-                    priceConverter(product.price)
-                  }}</span>
+                  <span v-if="USDEnabled == true" class="text-muted"
+                    >AR{{ priceConverter(product.price) }}
+                  </span>
+                  <span v-if="USDEnabled == false" class="text-muted"
+                    >AR{{ priceConverter(product.price * USDData.value) }}
+                  </span>
                 </div>
               </div>
             </div>
@@ -700,7 +706,7 @@ export default {
         this.msm_error = "Iniciá sesión para comprar";
         return;
       }
-      
+
       if (this.product[0].hasVariant && !this.cartObj.variant) {
         this.valid = false;
         this.addedToCart = false;
