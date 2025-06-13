@@ -170,12 +170,14 @@
                           >{{ item.name }}
                         </a>
                       </h3>
-                      <span class="text-muted" v-if="USDEnabled == false">AR{{
-                        priceConverter(item.price * USDData.value)
-                      }}</span>
-                      <span class="text-muted" v-if="USDEnabled == true">AR{{
-                        priceConverter(item.price)
-                      }}</span>
+                      <span class="text-muted" v-if="USDEnabled == false"
+                        >AR{{
+                          priceConverter(item.price * USDData.value)
+                        }}</span
+                      >
+                      <span class="text-muted" v-if="USDEnabled == true"
+                        >AR{{ priceConverter(item.price) }}</span
+                      >
                     </div>
                   </div>
                 </router-link>
@@ -755,15 +757,15 @@ export default {
         this.allProducts = data;
         this.products = data;
         this.loading = false;
-        if (this.$route.query.subcategory) {
-          this.getSubcategoryProducts();
-        }
-        if (this.$route.query.category) {
-          this.getCategoryProducts();
-        }
-        if (this.$route.query.filter) {
-          this.filterBySearch();
-        }
+        //if (this.$route.query.subcategory) {
+        //  this.getSubcategoryProducts();
+        //}
+        //if (this.$route.query.category) {
+        //  this.getCategoryProducts();
+        //}
+        //if (this.$route.query.filter) {
+        //  this.filterBySearch();
+        //}
         loader.hide();
       })
       .catch((error) => {
@@ -905,6 +907,26 @@ export default {
       }
       if (this.$route.query.filter) {
         this.filterBySearch();
+      }
+    },
+    products(to, from) {
+      //console.log("to", to);
+      //console.log("from", from);
+      //console.log("this.$route.query.subcategory", this.$route.query);
+      if (to.length > 0) {
+        //console.log("products has length");
+        if (!this.$route.query.subcategory && !this.$route.query.category) {
+          this.allProducts = this.products;
+        }
+        if (this.$route.query.subcategory) {
+          this.getSubcategoryProducts();
+        }
+        if (this.$route.query.category && !this.$route.query.subcategory) {
+          this.getCategoryProducts();
+        }
+        if (this.$route.query.filter) {
+          this.filterBySearch();
+        }
       }
     },
     minRange: function (value) {
